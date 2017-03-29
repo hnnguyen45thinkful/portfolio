@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=Roboto|Lato:100,300,400|Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script async src="https://use.fontawesome.com/01cf2bce9f.js"></script>
+  	<script async src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script async src="app.js"></script>
+  </head>
+  <body>
+    <header>
+    </header>
+    <nav>
+    </nav>
+    <section id="row1" class="hidden">
+      <div class="row">
+        <div id="hi_badge">
+          <img id="profilepic" src="img/profilepic.jpg" />
+          <div id="intro">
+            <p id="hi_line">Hi there <i class="fa fa-hand-paper-o" aria-hidden="true"></i>  &nbsp;My name is <span class="punc">&middot;&middot;&middot;</span> </p>
+            <h1 id="my_name">TIM PAIK<span class="punc">.</span></h1>
+          </div>
+        </div>
+        <p id="description1_line1"><span class="transparent">I&rsquo;m a new, ambitious</span> full-stack developer</p>
+        <p id="description1_line2">
+        looking to join a creative team where I can learn & contribute new perspectives<span class="punc"><i>.</i></span><br /> 
+        </p><br />
+        <h1 id="contact">
+          <div class="icon_border">&nbsp;</div>
+          <a class="contact_icon" href="https://github.com/tswpaik/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a> 
+          <a class="contact_icon" href="https://www.linkedin.com/tswpaik" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+          <a class="contact_icon" href="mailto:tswpaik@gmail.com" target="_blank"><i class="fa fa-at" aria-hidden="true"></i></a>
+          <a class="contact_icon" href="./resume.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+          <div class="icon_border">&nbsp;</div>
+        </h1>
+        <p id="contact_line">Reach out <span class="punc">-</span> Let&rsquo;s work together<span class="punc"><i>!</i></span></p>
+      </div>
+    </section>
+    <section id="row2">
+      <div class="row">
+        <h1><a class="open_close" id="h1row2" href="#"><i class="fa fa-code" aria-hidden="true"></i> My Tools<span id="description2">Here&rsquo;s what I use to build.</span></a></h1>
+        <div class="hidden">
+          <div class="type_section">
+            <p class="types">Front-end<br />Development</p>
+            <p class="skills">HTML5 <span class="punc">&middot;</span> CSS3 <span class="punc">&middot;</span> SASS <span class="punc">&middot;</span> Bootstrap 4 <span class="punc">&middot;</span> 
+              JS <span class="punc">&middot;</span> ES2016 <span class="punc">&middot;</span> React <span class="punc">&middot;</span> Redux <span class="punc">&middot;</span> jQuery</p>
+          </div>
+          <div class="type_section">
+            <p class="types">Back-end Development</p>
+            <p class="skills">Node<span class="punc">.</span>js <span class="punc">&middot;</span> Express <span class="punc">&middot;</span> MongoDB <span class="punc">&middot;</span> Mongoose</p>
+          </div>
+          <div class="type_section">
+            <p class="types">Authentication & Realtime frameworks</p>
+            <p class="skills">
+            Passport<span class="punc">.</span>js <span class="punc">&middot;</span> bcrypt <span class="punc">&middot;</span> Pusher <span class="punc">&middot;</span> Socket<span class="punc">.</span>io</p>
+          </div>
+          <div class="type_section">
+            <p class="types">Development Environment</p>
+            <p class="skills">Chrome DevTools <span class="punc">&middot;</span> command-line <span class="punc">&middot;</span> Git <span class="punc">&middot;</span> npm <span class="punc">&middot;</span> Webpack <span class="punc">&middot;</span> Heroku <span class="punc">&middot;</span> Chai <span class="punc">&middot;</span> Mocha <span class="punc">&middot;</span> Travis CI</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="row3">
+      <div class="row">
+        <h1><a class="open_close" id="h1row3" href="#"><span id="description3">Here&rsquo;s what I can build.</span>My Projects <i class="fa fa-cubes" aria-hidden="true"></i></a></h1>
+        <div class="hidden">
+          <div class="type_section">
+            <p class="types">Common Design & Architecture Features</p>
+            <p class="skills">Mobile-first <span class="punc">&middot;</span> Responsive <span class="punc">&middot;</span> Single-page</p>
+          </div>
+          <div class="app_section">
+            <p class="app_name"><i class="fa fa-terminal" aria-hidden="true"></i> Collabowrite</p>
+            <p class="app_description">Real-time user interaction <span class="punc">&middot;</span> React <span class="punc">&middot;</span>  ES2016 <span class="punc">&middot;</span> Node<span class="punc">.</span>js <span class="punc">&middot;</span> Express <span class="punc">&middot;</span> MongoDB/Mongoose <span class="punc">&middot;</span> Webpack</p>
+            <img class="screenshot" src="img/collabowrite.jpg" />
+            <p class="app_details">
+            Collabowrite is an app that enables users to work together real-time on sentence/paragraph-level writing. It uses account-free sign-up/in by generating a random, unique project access code when a user first creates a project. The code can then be shared to let others join and contribute to the project by providing feedback, revisions, or new proposals, which get displayed real-time to all users in session. Combined with a mobile-friendly interface, Collabowrite is great for inviting participation from a large audience during presentations and class.</p>
+          </div>
+          <div class="app_section">
+            <p class="app_name"><i class="fa fa-terminal" aria-hidden="true"></i> Lookitup</p>
+            <p class="app_description">Contextualized word search <span class="punc">&middot;</span> Open API use <span class="punc">&middot;</span> AJAX calls</p>
+            <img class="screenshot" src="img/lookitup.jpg" />
+            <p class="app_details">
+              Lookitup is a word/phrase-search engine that goes above and beyond a dictionary definition and saves you the hassle of going through search results<span class="punc">.</span> Lookitup grabs the following<span class="punc">:</span><br />
+              1<span class="punc">.</span> Relevant dictionary entries along with pronunciation audio files and usage examples from Longman&rsquo;s Dictionary<span class="punc">;</span><br />
+              2<span class="punc">.</span> The intro section of the term&rsquo;s Wikipedia page when available<span class="punc">;</span><br />
+              3<span class="punc">.</span> YouTube videos filtered for informative clips, instantly playable on an on-page pop-up player.<br />
+            </p>
+          </div>
+          <div class="app_section">
+            <p class="app_name"><i class="fa fa-terminal" aria-hidden="true"></i> Stu<span class="punc">-</span>dex</p>
+            <p class="app_description">Course roster management system <span class="punc">&middot;</span> Node<span class="punc">.</span>js <span class="punc">&middot;</span> Express <span class="punc">&middot;</span> MongoDB/Mongoose <span class="punc">&middot;</span> Chai <span class="punc">&middot;</span> Mocha</p>
+            <img class="screenshot" src="img/stu-dex.jpg" />
+            <p class="app_details">
+            Stu-dex is a course management system for teachers with a diverse student demographic (e.g. ESL or international college/university programs). Teachers fill out and save information about where their students are from, what they’re studying or pursuing as a career, and other interesting facts shared during icebreaking sessions. Stu-dex can then be used to print weekly rosters which include student info and space for attendance/notes to help teachers learn their students&rsquo; names and backgrounds. The app can also be used to send class-wide emails.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+    </footer>
+  </body>
+</html>
