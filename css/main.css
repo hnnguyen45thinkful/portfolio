@@ -258,6 +258,12 @@ a:link, a:hover, a:active, a:visited {
   box-shadow: 0 0 8px dimgray;
   image-rendering: crisp-edges;
   vertical-align: middle;
+  transition: box-shadow 0.25s ease-in;
+}
+
+.screenshot:hover {
+  box-shadow: 0 0 20px dimgray;
+  transition: box-shadow 0.25s ease-in;
 }
 
 .app_details {
