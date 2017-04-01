@@ -10,7 +10,8 @@ if (OSName === "Windows" || OSName === "UNIX" || OSName === "Linux" && window.sc
 } else {
   $('.hidden').first().slideDown(1000);    
 }
-  
+
+$(function(){  
   $(document).on('click', '.open_close', function(e) {
     e.preventDefault();
     $(this).parent().siblings('.hidden').slideToggle("slow");
