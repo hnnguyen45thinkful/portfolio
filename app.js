@@ -4,7 +4,9 @@ if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
 if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
 if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
 
-if (OSName === "Windows" || OSName === "UNIX" || OSName === "Linux" && window.screen.availWidth < 1025) {
+console.log(window.screen.availWidth);
+
+if (OSName === "Windows" || OSName === "UNIX" || OSName === "Linux" || window.screen.availWidth < 1025) {
   $('.hidden').first().show();
   $('html, h1, .types').css('font-weight', '300');
 } else {
