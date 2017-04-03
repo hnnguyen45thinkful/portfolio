@@ -404,7 +404,8 @@ a:link, a:hover, a:active, a:visited {
 
 #scroll_div {
   text-align: center;
-  visibility: hidden
+  padding-top: 10px;
+  visibility: hidden;
 }
 
 @media only screen and (max-width: 767px) {
