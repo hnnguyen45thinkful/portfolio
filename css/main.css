@@ -1,19 +1,10 @@
-html, body {
-  height: 100%;
-}
-
 body {
+  position: relative;
   font-family: "Lato", sans-serif;
   font-weight: 100;
   font-size: 130%;
   color: white;
-  text-shadow: 0 0 3px #222222;
-}
-
-.content {
-  box-sizing: border-box;
-  width: 50%;
-  float: left;
+  text-shadow: 0 0 2px #222222;
 }
 
 #profilepic {
@@ -56,6 +47,7 @@ h1 {
   width: 450px;
   margin: 0 auto;
 }
+
 
 .fa {
   opacity: 0.3;
@@ -228,6 +220,7 @@ p {
 }
 
 #row4 {
+  position: absolute;
   transition: box-shadow 0.5s ease-in;
   padding: 35px;
   background: #660066;
@@ -237,6 +230,12 @@ p {
   background: -o-linear-gradient(bottom right, #CC0033 0%, #CCCC33 100%);
   background: -ms-linear-gradient(bottom right, #CC0033 0%, #CCCC33 100%);
   background: linear-gradient(to bottom right, #CC0033 0%, #CCCC33 100%);
+}
+
+@media only screen and (max-width: 1405px) {
+  #row4 {
+    width: 100%;
+  }
 }
 
 a:link, a:hover, a:active, a:visited {
@@ -348,4 +347,167 @@ a:link, a:hover, a:active, a:visited {
   opacity: 0.85;
   line-height: 24px;
   vertical-align: middle;
+}
+
+@media only screen and (max-width: 767px) {
+  #row1 {
+    padding: 50px 0;
+  }
+
+  #profilepic {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    position: relative;
+    top: -25px;
+  }
+
+  #hi_line {
+    font-size: 22px;
+    left: 20px;
+  }
+
+  #my_name {
+    font-size: 64px;
+    position: relative;
+    top: 10px;
+  }
+
+  #intro {
+    display: block;
+    left: 0px;
+    margin: 0 auto;
+    width: 280px;
+  }
+
+  #hi_badge {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  #description1_line1 {
+    margin-top: 0px;
+    font-size: 26px;
+    text-transform: uppercase;
+    position: relative;
+    top: 18px;
+  }
+
+  .transparent {
+   display: none;
+  }
+
+  #description1_line2 {
+    width: 310px;
+    margin: 20px auto;
+    font-size: 18px;
+  }
+
+  #contact {
+    font-size: 60px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .icon_border {
+    height: 40px;
+    width: 7%;
+    display: inline-block;
+    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .contact_icon {
+    padding: 0px;
+  }
+
+  br {
+    display: none;
+  }
+
+  #contact_line {
+    margin-top: 15px;
+    font-size: 22px;
+  }  
+
+  #description2, #description3, #description4 {
+    display: none;
+  }
+
+  #row2, #row3, #row4 {
+    padding: 20px 10px;
+    width: 100%
+  }
+ 
+   #h1row2, #h1row3, #h1row4 {
+     font-size: 25px;
+     text-align: center;
+     text-transform: uppercase;
+   }
+  
+   .h1row2move, .h1row3move, .h1row4move {
+     margin: 0;
+   }
+  
+   .hidden {
+     padding: 15px;
+   }
+  
+   .hash_section {
+     padding: 10px 0;
+     margin: 0;
+     border: 0;
+     font-size: 16px;
+   }
+  
+   .hash {
+     margin-right: 5px;
+     font-size: 21px;
+   }
+  
+   .types, .skills, .app_name, .app_description, .app_details {
+     display: block;
+     width: 100%;
+     text-align: left;
+     padding: 0;
+     border: none;
+     padding: 0;
+     margin: 0;
+     font-size: 16px;
+     line-height: 30px;
+   }
+  
+   .types, .app_name {
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+   }
+  
+  .app_section {
+    text-align: left;
+    margin: 0;
+    border: none;
+  }
+  
+  .app_name {
+    opacity: 1;
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+  
+  .app_description {
+    opacity: 0.8;
+    line-height: 25px;
+  }
+  
+  .app_details, .screenshot {
+    width: 100%;
+  }
+  
+  .app_details {
+    opacity: 1;
+    padding-bottom: 15px;
+  }
+
 }

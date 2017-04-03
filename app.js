@@ -16,7 +16,7 @@ if (OSName === "Windows" || OSName === "UNIX" || OSName === "Linux" || window.sc
 $(function(){  
   $(document).on('click', '.open_close', function(e) {
     e.preventDefault();
-    if (window.screen.availWidth < 1025) {
+    if (window.screen.availWidth < 768) {
       $(this).parent().siblings('.hidden').slideToggle();
     } else if ($(this).is(':visible')) {
        $("html, body").animate({scrollTop: $(this).offset().top});
