@@ -6,21 +6,28 @@ if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
 
 if (OSName === "Windows" || OSName === "UNIX" || OSName === "Linux" || window.screen.availWidth < 1025) {
   $('body, h1, .types').css('font-weight', '300');
-  $('#profilepic').css('-webkit-filter', 'brightness(1.1) contrast(1.2) grayscale(0.3)');
-  $('#profilepic').css('filter', 'brightness(1.1) contrast(1.2) grayscale(0.3)');
-  $('#contact_line, #description2, #description3').css('transform', 'scaleX(0.94)');
-  $('#description2').css('left', '-7px');
-  $('#description3').css('right', '-7px');
+  if (OSName === "Windows" || OSName === "UNIX" || OSName === "Linux") {
+    $('#profilepic').css('-webkit-filter', 'brightness(1.1) contrast(1.2) grayscale(0.3)');
+    $('#profilepic').css('filter', 'brightness(1.1) contrast(1.2) grayscale(0.3)');
+    $('#contact_line, #description2, #description3').css('transform', 'scaleX(0.94)');
+    $('#description2').css('left', '-7px');
+    $('#description3').css('right', '-7px');
+  }
 }
 
 $(function(){  
   $(document).on('click', '.open_close', function(e) {
     e.preventDefault();
     if (window.screen.availWidth < 768) {
-      $(this).parent().siblings('.hidden').slideToggle();
-    } else if ($(this).is(':visible')) {
-       $("html, body").animate({scrollTop: $(this).offset().top});
+      $(this).parent().siblings('.hidden').slideToggle(function(){
+      $('html, body').animate({
+        scrollTop: $(this).parent('section').offset().top}, "slow");            
+      });
     }      
+  });
+  
+  $(document).on('click', '#scroll_up', function(e) {
+    $('html, body').animate({ scrollTop: 0 }, "slow");
   });
   
   $('.hash_section').hover(function(){
