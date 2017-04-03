@@ -6,14 +6,16 @@
   float: left;
 }
 
- /*Mobile defaults */
 .content {
   width: 100%;
 }
 
- /*Tablet */
 @media only screen and (min-width: 1405px) {
   .content {
     width: 50%;
+  }
+  
+  #row4 {
+    margin-top: 80px;
   }
 }
