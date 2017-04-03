@@ -4,7 +4,7 @@ body {
   font-size: 130%;
   color: white;
   text-shadow: 0 0 3px #222222;
-  background: #660066;
+  background: #CC5D1C;
   background: -moz-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #CCCC00), color-stop(100%, #CC0033));
   background: -webkit-linear-gradient(left top, #CCCC00 0%, #CC0033 100%);
@@ -15,6 +15,22 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.content {
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1366px) {
+  .content {
+    width: 50%;
+  }
+  
+  #row4 {
+    margin-top: 80px;
+  }
 }
 
 #profilepic {
@@ -193,7 +209,7 @@ p {
 
 #row1 {
   padding: 100px 0;
-  background: #6699FF;
+  background: #6684E6;
   background-image: -moz-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66FFFF), color-stop(100%, #6600CC));
   background-image: -webkit-linear-gradient(left top, #66FFFF 0%, #6600CC 100%);
@@ -205,7 +221,7 @@ p {
 #row2 {
   padding: 35px;
   transition: box-shadow 0.5s ease-in;
-  background: #00B386;
+  background: #008BA0;
   background: -moz-linear-gradient(top right, #00CCCC 0%, #003366 100%);
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #003366), color-stop(100%, #003366));
   background: -webkit-linear-gradient(left bottom, #00CCCC 0%, #003366 100%);
@@ -218,19 +234,29 @@ p {
   padding: 35px;
   transition: box-shadow 0.5s ease-in;
   text-align: right;
-  background: #00B386;
-  background: -moz-linear-gradient(top right, #FF9999 0%, #660066 100%);
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #FF9999), color-stop(100%, #660066));
-  background: -webkit-linear-gradient(left bottom, #FF9999 0%, #660066 100%);
-  background: -o-linear-gradient(top right, #FF9999 0%, #660066 100%);
-  background: -ms-linear-gradient(top right, #FF9999 0%, #660066 100%);
-  background: linear-gradient(to top right, #FF9999 0%, #660066 100%);
+  background: #0D9875;
+  background: -moz-linear-gradient(top right, #19CEA1 0%, #005842 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #19CEA1), color-stop(100%, #005842));
+  background: -webkit-linear-gradient(left bottom, #19CEA1 0%, #005842 100%);
+  background: -o-linear-gradient(top right, #19CEA1 0%, #005842 100%);
+  background: -ms-linear-gradient(top right, #19CEA1 0%, #005842 100%);
+  background: linear-gradient(to top right, #19CEA1 0%, #005842 100%);
 }
 
 #row4 {
   position: absolute;
   transition: box-shadow 0.5s ease-in;
   padding: 35px;
+}
+
+.mobile_row4 {
+  background: #CC5D1C;
+  background: -moz-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #CCCC00), color-stop(100%, #CC0033));
+  background: -webkit-linear-gradient(left top, #CCCC00 0%, #CC0033 100%);
+  background: -o-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
+  background: -ms-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
+  background: linear-gradient(to bottom right, #CCCC00 0%, #CC0033 100%);
 }
 
 @media only screen and (max-width: 1365px) {
@@ -400,7 +426,7 @@ a:link, a:hover, a:active, a:visited {
   }
 
   #my_name {
-    font-size: 64px;
+    font-size: 61px;
     position: relative;
     top: 10px;
   }
@@ -471,50 +497,50 @@ a:link, a:hover, a:active, a:visited {
     width: 100%
   }
  
-   #h1row2, #h1row3, #h1row4 {
-     font-size: 25px;
-     text-align: center;
-     text-transform: uppercase;
-   }
+  #h1row2, #h1row3, #h1row4 {
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+  }
   
-   .h1row2move, .h1row3move, .h1row4move {
-     margin: 0;
-   }
+  .h1row2move, .h1row3move, .h1row4move {
+    margin: 0;
+  }
   
-   .hidden {
-     padding: 15px;
-   }
+  .hidden {
+    padding: 15px;
+  }
   
-   .hash_section {
-     padding: 10px 0;
-     margin: 0;
-     border: 0;
-     font-size: 16px;
-   }
+  .hash_section {
+    padding: 10px 0;
+    margin: 0;
+    border: 0;
+    font-size: 16px;
+  }
   
-   .hash {
-     margin-right: 5px;
-     font-size: 21px;
-   }
+  .hash {
+    margin-right: 5px;
+    font-size: 21px;
+  }
   
-   .types, .skills, .app_name, .app_description, .app_details {
-     display: block;
-     width: 100%;
-     text-align: left;
-     padding: 0;
-     border: none;
-     padding: 0;
-     margin: 0;
-     font-size: 16px;
-     line-height: 30px;
-   }
-  
-   .types, .app_name {
+  .types, .skills, .app_name, .app_description, .app_details {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+ .types, .app_name {
     text-transform: uppercase;
     border-bottom: 1px solid white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 10px;
-   }
+  }
   
   .app_section {
     text-align: left;
