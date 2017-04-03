@@ -8,38 +8,40 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    <header>
-    </header>
-    <nav>
-    </nav>
-    <section id="row1" class="hidden">
-      <div class="row">
+    <div class="content">
+      <section id="row1">
         <div id="hi_badge">
           <img id="profilepic" src="img/profilepic.jpg" />
           <div id="intro">
-            <p id="hi_line">Hi there <i class="fa fa-hand-paper-o" aria-hidden="true"></i>  &nbsp;My name is <span class="punc">&middot;&middot;&middot;</span> </p>
+            <p id="hi_line">Hi there &nbsp;<i class="fa fa-hand-paper-o" aria-hidden="true"></i>  &nbsp;My name is <span class="punc">&middot;&middot;&middot;</span> </p>
             <h1 id="my_name">TIM PAIK<span class="punc">.</span></h1>
           </div>
         </div>
         <p id="description1_line1"><span class="transparent">I&rsquo;m an ambitious </span> full-stack developer</p>
         <p id="description1_line2">
-          who builds to streamline processes and tackle common pain points. <br />
-        I'm looking to join a creative team where I can actively learn & contribute<span class="punc"><i>.</i></span><br /> 
+          who likes to streamline processes and tackle common pain points<span class="punc"><i>.</i></span><br />
+        I&rsquo;m looking to join a creative team where I can actively learn & contribute<span class="punc"><i>.</i></span><br /> 
         </p><br />
         <h1 id="contact">
           <div class="icon_border">&nbsp;</div>
-          <a class="contact_icon" href="https://github.com/tswpaik/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a> 
-          <a class="contact_icon" href="https://www.linkedin.com/tswpaik" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-          <a class="contact_icon" href="mailto:tswpaik@gmail.com" target="_blank"><i class="fa fa-at" aria-hidden="true"></i></a>
-          <a class="contact_icon" href="./resume.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+          <a href="https://github.com/tswpaik/" target="_blank"><i class="contact_icon fa fa-github" aria-hidden="true"></i></a> 
+          <a href="https://www.linkedin.com/tswpaik" target="_blank"><i class="contact_icon fa fa-linkedin-square" aria-hidden="true"></i></a>
+          <a href="mailto:tswpaik@gmail.com" target="_blank"><i class="contact_icon fa fa-at" aria-hidden="true"></i></a>
+          <a href="./resume.pdf" target="_blank"><i class="contact_icon fa fa-file-text" aria-hidden="true"></i></a>
           <div class="icon_border">&nbsp;</div>
         </h1>
         <p id="contact_line">Reach out <span class="punc">-</span> Let&rsquo;s work together<span class="punc"><i>!</i></span></p>
-      </div>
-    </section>
-    <section id="row2">
-      <div class="row">
-        <h1><a class="open_close" id="h1row2" href="#"><i class="fa fa-code" aria-hidden="true"></i> My Tools<span id="description2">Here&rsquo;s what I use to build.</span></a></h1>
+      </section>
+      <section id="row2">
+        <h1 id="h1row2" ><a class="open_close" href="#"><span id="description2">Here&rsquo;s why I build.</span><i class="fa fa-comment-o" aria-hidden="true"></i> About Me</a></h1>
+        <div class="hidden">
+          <p class="hash_section"><span class="large hash">#EdTech</span> As a teacher, I&rsquo;ve found technology to be an intuitive way to encourage today&rsquo;s students to interact, participate, and learn proactively. I set out to learn code to build learning and productivity tools for education from an educator&rsquo;s perspective.</p>
+          <p class="hash_section"><span class="medium hash">#ProblemSolving</span> I enjoy a good challenge, and the fact that programming = problem solving <span class="punc">-</span> from identifying the big picture problem your app aims to address to troubleshooting software-level problems <span class="punc">-</span> keeps me on my toes<span class="punc"><i>!</i></span></p>
+          <p class="hash_section"><span class="large hash">#Creativity</span>But most of all, I love the creative process of building. Time flies when I&rsquo;m envisioning the look and feel of the app, how the user interacts with the interface, and the most effective and efficient approach to code the functionalities.</p>            
+        </div>
+      </section>
+      <section id="row3">
+        <h1 id="h1row3"><a class="open_close" href="#"><i class="fa fa-code" aria-hidden="true"></i> My Skills<span id="description3">Here&rsquo;s how I build.</span></a></h1>
         <div class="hidden">
           <div class="type_section">
             <p class="types">Front-End<br />Development</p>
@@ -60,11 +62,11 @@
             <p class="skills">Chrome DevTools <span class="punc">&middot;</span> command-line <span class="punc">&middot;</span> Git <span class="punc">&middot;</span> npm <span class="punc">&middot;</span> Webpack <span class="punc">&middot;</span> Heroku <span class="punc">&middot;</span> Chai <span class="punc">&middot;</span> Mocha <span class="punc">&middot;</span> Travis CI</p>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="row3">
-      <div class="row">
-        <h1><a class="open_close" id="h1row3" href="#"><span id="description3">Here&rsquo;s what I've built.</span>My Projects <i class="fa fa-cubes" aria-hidden="true"></i></a></h1>
+      </section>
+    </div>
+    <div class="content">
+      <section id="row4">
+        <h1 id="h1row4" ><a class="open_close" href="#"><span id="description4">Here&rsquo;s what I&rsquo;ve built.</span><i class="fa fa-cubes" aria-hidden="true"></i> My Projects</a></h1>
         <div class="hidden">
           <div class="type_section">
             <p class="types">Common Design & Architecture Features</p>
@@ -79,27 +81,25 @@
           </div>
           <div class="app_section">
             <p class="app_name"><a href="https://tswpaik.github.io/lookitup/" target="_blank"><i class="fa fa-terminal" aria-hidden="true"></i> Lookitup</a></p>
-            <p class="app_description">Contextualized word search <span class="punc">&middot;</span> Open API use <span class="punc">&middot;</span> AJAX calls</p>
+            <p class="app_description">Contextualized word search <span class="punc">&middot;</span> Open API use <span class="punc">&middot;</span> AJAX calls <span class="punc">&middot;</span> jQuery tree-traversal & DOM manipulation</p>
             <a href="https://tswpaik.github.io/lookitup/" target="_blank"><img class="screenshot" src="img/lookitup.jpg" /></a>
             <p class="app_details">
-              Lookitup is a word/phrase-search engine that goes above and beyond a dictionary definition and saves you the hassle of going through search results<span class="punc">.</span> Lookitup grabs the following<span class="punc">:</span><br />
-              1<span class="punc">.</span> Relevant dictionary entries along with pronunciation audio files and usage examples from Longman&rsquo;s Dictionary<span class="punc">;</span><br />
-              2<span class="punc">.</span> The intro section of the term&rsquo;s Wikipedia page when available<span class="punc">;</span><br />
+              Lookitup is a word/phrase-search engine that goes above and beyond a dictionary definition and saves you the hassle of going through search results<span class="punc">.</span> Lookitup grabs:<span class="punc">:</span><br />
+              1<span class="punc">.</span> Relevant dictionary entries with pronunciation audio files and usage examples from Longman&rsquo;s Dictionary<span class="punc">;</span><br />
+              2<span class="punc">.</span> The intro section of the term&rsquo;s Wikipedia page<span class="punc">;</span><br />
               3<span class="punc">.</span> YouTube videos filtered for informative clips, instantly playable on an on-page pop-up player.<br />
             </p>
           </div>
           <div class="app_section">
-            <p class="app_name"><a href="https://stu-dex.herokuapp.com/" target="_blank"><i class="fa fa-terminal" aria-hidden="true"></i> Stu<span class="punc">-</span>dex</a></p>
+            <p class="app_name"><a href="https://stu-dex.herokuapp.com/" target="_blank"><i class="fa fa-terminal" aria-hidden="true"></i> STU<span class="punc">-</span>DEX</a></p>
             <p class="app_description">Course roster management system <span class="punc">&middot;</span> Node<span class="punc">.</span>js <span class="punc">&middot;</span> Express <span class="punc">&middot;</span> MongoDB/Mongoose <span class="punc">&middot;</span> Chai <span class="punc">&middot;</span> Mocha</p>
             <a href="https://stu-dex.herokuapp.com/" target="_blank"><img class="screenshot" src="img/stu-dex.jpg" /></a>
             <p class="app_details">
             Stu-dex is a course management system for teachers with a diverse student demographic (e.g. ESL or international college/university programs). Teachers fill out and save information about where their students are from, what they’re studying or pursuing as a career, and other interesting facts shared during icebreaking sessions. Stu-dex can then be used to print weekly rosters which include student info and space for attendance/notes to help teachers learn their students&rsquo; names and backgrounds. The app can also be used to send class-wide emails.</p>
           </div>
         </div>
-      </div>
-    </section>
-    <footer>
-    </footer>
+      </section>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/01cf2bce9f.js"></script>
     <script src="app.js"></script>

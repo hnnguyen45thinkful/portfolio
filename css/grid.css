@@ -3,9 +3,7 @@
 }
 
 .row {
-  max-width: 760px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 1000;
   margin: 0 auto;
 }
 
@@ -19,20 +17,19 @@
   clear: both;
 }
 
-.content, .banner {
+.content {
   float: left;
-  padding-left: 1.04166666%;
-  padding-right: 1.04166666%;
 }
 
-/* Mobile defaults */
-.content, .banner {
+ /*Mobile defaults */
+.content {
   width: 100%;
 }
 
-/* Tablet */
-@media only screen and (min-width: 769px) {
+ /*Tablet */
+@media only screen and (min-width: 1405px) {
   .content {
     width: 50%;
+    height: 100%;
   }
 }

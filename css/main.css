@@ -1,16 +1,26 @@
-html {
+html, body {
+  height: 100%;
+}
+
+body {
   font-family: "Lato", sans-serif;
   font-weight: 100;
   font-size: 130%;
   color: white;
-  text-shadow: 0 0 3px dimgray;
+  text-shadow: 0 0 3px #222222;
+}
+
+.content {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
 }
 
 #profilepic {
   width: 125px;
   border-radius: 100%;
-  -webkit-filter: ightness(1.05) contrast(1.1) grayscale(0.35);
-  filter: brightness(1.05) contrast(1.1) grayscale(0.35);
+  -webkit-filter: contrast(1.1) brightness(1.05) grayscale(0.35);
+  filter: contrast(1.1) brightness(1.05) grayscale(0.35);
   border: 4px solid white;
   border: 4px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 8px dimgray;
@@ -25,7 +35,8 @@ h1 {
   opacity:  0.95;
   font-size: 20px;
   position: relative;
-  top: 13px;
+  top: 5px;
+  left: 40px;
 }
 
 #my_name {
@@ -42,7 +53,7 @@ h1 {
 }
 
 #hi_badge {
-  width: 440px;
+  width: 450px;
   margin: 0 auto;
 }
 
@@ -69,6 +80,11 @@ h1 {
 }
 
 .fa:hover {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+}
+
+.section_icon_hover {
   opacity: 1;
   transition: opacity 0.4s ease-in;
 }
@@ -101,11 +117,12 @@ h1 {
   height: 40px;
   width: 25%;
   display: inline-block;
-  border-bottom: 2.5px solid white;
-  border-bottom: 2.5px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact_icon {
+  opacity: 0.3;
   padding: 5px;
 }
 
@@ -113,34 +130,35 @@ h1 {
   text-align: center;
   margin-top: 35px;
   font-size: 30px;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
-#description2, #description3 {
-  opacity: 0.5;
+#description2, #description3, #description4 {
   font-size: 30px;
   padding-top: 7px;
 }
 
-#description2 {
-  float: left;
+#description2, #description4 {
+  float: right;
+  position: relative;
 }
 
 #description3 {
-  float: right;
+  float: left;
+  position: relative;
 }
 
-#h1row2, #h1row3 {
+#h1row2, #h1row3, #h1row4 {
   transition: margin 0.25s ease-in;  
 }
 
-#h1row2:hover {
-  margin-right: 30px;
+.h1row2move, .h1row4move {
+  margin-left: 30px;
   transition: margin 0.25s ease-in;
 }
 
-#h1row3:hover {
-  margin-left: 30px;
+.h1row3move {
+  margin-right: 30px;
   transition: margin 0.25s ease-in;
 }
 
@@ -154,34 +172,71 @@ p {
   padding: 0 2px;
 }
 
+.hash {
+  opacity: 0.5;
+  margin-right: 10px;
+  transition: opacity 0.25s ease-in;
+}
+
+.hash_hover {
+  opacity: 1;
+  transition: opacity 0.25s ease-in;
+}
+
+.medium {
+  font-size: 25px;
+}
+
+.large {
+  font-size: 35px;
+}
+
 #row1 {
   padding: 100px 0;
-  background: #6600FF;
-  background: -webkit-linear-gradient(left top,#66FFFF, #6600FF);
-  background: -o-linear-gradient(bottom right,#66FFFF, #6600FF);
-  background: -moz-linear-gradient(bottom right,#66FFFF, #6600FF);
-  background: linear-gradient(to bottom right,#66FFFF, #6600FF);
+  background: #6699FF;
+  background-image: -moz-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66FFFF), color-stop(100%, #6600CC));
+  background-image: -webkit-linear-gradient(left top, #66FFFF 0%, #6600CC 100%);
+  background-image: -o-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
+  background-image: -ms-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
+  background-image: linear-gradient(to bottom right, #66FFFF 0%, #6600CC 100%);
 }
 
 #row2 {
+  padding: 35px;
   transition: box-shadow 0.5s ease-in;
-  text-align: right;
-  padding: 30px;
-  background: #336666;
-  background: -webkit-linear-gradient(left top,#336666, #33FF66);
-  background: -o-linear-gradient(bottom right,#336666, #33FF66);
-  background: -moz-linear-gradient(bottom right,#336666, #33FF66);
-  background: linear-gradient(to bottom right,#336666, #33FF66);
+  background: #00B386;
+  background: -moz-linear-gradient(top right, #00CCCC 0%, #003366 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #003366), color-stop(100%, #003366));
+  background: -webkit-linear-gradient(left bottom, #00CCCC 0%, #003366 100%);
+  background: -o-linear-gradient(top right, #00CCCC 0%, #003366 100%);
+  background: -ms-linear-gradient(top right, #00CCCC 0%, #003366 100%);
+  background: linear-gradient(to top right, #00CCCC 0%, #003366 100%);
 }
 
 #row3 {
+  padding: 35px;
   transition: box-shadow 0.5s ease-in;
-  padding: 30px;
-  background: #CC0000;
-  background: -webkit-linear-gradient(left top,#CCCC00, #CC0000);
-  background: -o-linear-gradient(bottom right,#CCCC00, #CC0000);
-  background: -moz-linear-gradient(bottom right,#CCCC00, #CC0000);
-  background: linear-gradient(to bottom right,#CCCC00, #CC0000);
+  text-align: right;
+  background: #00B386;
+  background: -moz-linear-gradient(top right, #FF9999 0%, #660066 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #FF9999), color-stop(100%, #660066));
+  background: -webkit-linear-gradient(left bottom, #FF9999 0%, #660066 100%);
+  background: -o-linear-gradient(top right, #FF9999 0%, #660066 100%);
+  background: -ms-linear-gradient(top right, #FF9999 0%, #660066 100%);
+  background: linear-gradient(to top right, #FF9999 0%, #660066 100%);
+}
+
+#row4 {
+  transition: box-shadow 0.5s ease-in;
+  padding: 35px;
+  background: #660066;
+  background: -moz-linear-gradient(bottom right, #CC0033 0%, #CCCC33 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #CC0033), color-stop(100%, #CCCC33));
+  background: -webkit-linear-gradient(left top, #CC0033 0%, #CCCC33 100%);
+  background: -o-linear-gradient(bottom right, #CC0033 0%, #CCCC33 100%);
+  background: -ms-linear-gradient(bottom right, #CC0033 0%, #CCCC33 100%);
+  background: linear-gradient(to bottom right, #CC0033 0%, #CCCC33 100%);
 }
 
 a:link, a:hover, a:active, a:visited {
@@ -190,8 +245,13 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .hidden {
-  display: none;
-  padding: 20px 0 0 0;
+  padding: 30px 0 0 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .hidden {
+    display: none;
+  }
 }
 
 .type_section {
@@ -204,21 +264,30 @@ a:link, a:hover, a:active, a:visited {
   font-size: 19px;
   width: 27%;
   color: white;
-  opacity: 0.6;
+  opacity: 0.7;
   font-weight: 100;
   line-height: normal;
   text-align: right;
   vertical-align: middle;
 }
 
-.skills {
+.skills, .hash_section {
+  opacity: 0.9;
   display: inline-block;
-  width: 70%;
+  width: 65%;
   vertical-align: middle;
   padding-left: 15px;
   margin-left: 15px;
   border-left: 1px solid white;
   border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hash_section {
+  display: block;
+  width: 95%;
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 10px;
 }
 
 .app_section {
@@ -234,12 +303,19 @@ a:link, a:hover, a:active, a:visited {
   text-align: right;
   font-size: 26px;
   vertical-align: middle;
+  opacity: 0.7;
+  transition: opacity 0.25s ease-in;
+}
+
+.app_name:hover {
+  opacity: 1;
+  transition: opacity 0.25s ease-in;
 }
 
 .app_description {
   display: inline-block;
   opacity: 1;
-  width: 70%;
+  width: 65%;
   font-size: 18px;
   padding: 0 0 5px 15px;
   margin-left: 15px;
@@ -254,22 +330,22 @@ a:link, a:hover, a:active, a:visited {
   margin: 10px 0;
   border: 5px solid white;
   border: 5px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 8px dimgray;
+  box-shadow: 0 0 8px #555555;
   vertical-align: middle;
-  transition: box-shadow 0.25s ease-in;
+  transition: box-shadow 0.5s ease-in;
 }
 
 .screenshot:hover {
-  box-shadow: 0 0 20px dimgray;
-  transition: box-shadow 0.25s ease-in;
+  box-shadow: 0 0 10px white;
+  transition: box-shadow 0.5s ease-in;
 }
 
 .app_details {
   display: inline-block;
-  width: 45%;
+  width: 49%;
   padding: 5px 0 0 15px;
   font-size: 14px;
-  opacity: 0.7;
+  opacity: 0.85;
   line-height: 24px;
   vertical-align: middle;
 }
