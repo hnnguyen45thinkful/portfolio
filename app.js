@@ -16,14 +16,14 @@ $(function(){
     }
   }
   
-  if (window.screen.width < 1366) {
+  if (window.screen.availWidth < 1366) {
     $('body').css('background', 'none');
     $('#row4').addClass('mobile_row4');
   }
   
   $('.open_close').click(function(e) {
     e.preventDefault();
-    if (window.screen.width < 768) {
+    if ($(window).width() < 768) {
       $(this).parent().siblings('.hidden').slideToggle(function(){
         $('html, body').animate({ scrollTop: $(this).parent('section').offset().top }, "slow");            
       });

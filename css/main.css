@@ -131,7 +131,7 @@ h1 {
 
 .icon_border {
   height: 40px;
-  width: 25%;
+  width: 28%;
   display: inline-block;
   border-bottom: 1px solid white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -470,7 +470,7 @@ a:link, a:hover, a:active, a:visited {
 
   .icon_border {
     height: 40px;
-    width: 7%;
+    width: 15%;
     display: inline-block;
     border-bottom: 1px solid white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
