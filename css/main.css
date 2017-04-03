@@ -233,7 +233,7 @@ p {
   padding: 35px;
 }
 
-@media only screen and (max-width: 1405px) {
+@media only screen and (max-width: 1365px) {
   #row4 {
     width: 100%;
   }
@@ -350,15 +350,29 @@ a:link, a:hover, a:active, a:visited {
   vertical-align: middle;
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1404px) {
+@media only screen and (min-width: 800px) and (max-width: 1365px) {
   .app_details {
     font-size: 16px;
   }
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1404px) {
+@media only screen and (min-width: 900px) and (max-width: 1365px) {
   .app_details {
     line-height: 30px;
+  }
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1439px) {
+  #description1_line1 {
+    font-size: 40px;
+  }
+  
+  #description1_line2 {
+    font-size: 20px;
+  }
+  
+  .app_details {
+    line-height: 19.5px;
   }
 }
 
