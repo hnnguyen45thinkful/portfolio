@@ -15,6 +15,10 @@ $(function(){
       $('#description2').css('left', '-7px');
       $('#description3').css('right', '-7px');
     }
+    
+    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+      $('body').css('text-shadow', '0 0 2px #222222');
+    }
   }
   
   if (window.screen.availWidth < 1366) {
