@@ -4,7 +4,8 @@ $(function(){
   if (navigator.appVersion.indexOf("Mac") != -1) OS = "Mac";
   if (navigator.appVersion.indexOf("X11") != -1) OS = "UNIX";
   if (navigator.appVersion.indexOf("Linux") != -1) OS = "Linux";
-  if (OS === "Windows" || OS === "UNIX" || OS === "Linux" || window.screen.availWidth < 1025) {
+  
+  if (OS === "Windows" || OS === "UNIX" || OS === "Linux" || window.screen.availWidth < 1025 || navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
     $('body, h1, .types').css('font-weight', '300');
     
     if (OS === "Windows" || OS === "UNIX" || OS === "Linux") {
