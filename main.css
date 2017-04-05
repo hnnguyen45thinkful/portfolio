@@ -49,13 +49,13 @@ nav {
 }
 
 .nav_link {
-  opacity: 0.6;
-  transition: opacity 0.25s ease-in;
+  opacity: 0.9;
+  transition: text-shadow 0.25s ease-in;
 }
 
 .nav_link:hover {
-  opacity: 1;
-  transition: opacity 0.25s ease-in;
+  text-shadow: 0 0 2px silver;
+  transition: text-shadow 0.25s ease-in;
 }
 
 section {
@@ -81,7 +81,7 @@ h1 {
   font-size: 20px;
   position: relative;
   top: 5px;
-  left: 45px;
+  left: 40px;
 }
 
 #my_name {
