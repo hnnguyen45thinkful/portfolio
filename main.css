@@ -4,33 +4,8 @@ body {
   font-size: 130%;
   color: white;
   text-shadow: 0 0 3px #222222;
-  background: #CC5D1C;
-  background: -moz-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #CCCC00), color-stop(100%, #CC0033));
-  background: -webkit-linear-gradient(left top, #CCCC00 0%, #CC0033 100%);
-  background: -o-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
-  background: -ms-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
-  background: linear-gradient(to bottom right, #CCCC00 0%, #CC0033 100%);
   height: 100%;
   margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.content {
-  box-sizing: border-box;
-  float: left;
-  width: 100%;
-}
-
-@media only screen and (min-width: 1366px) {
-  .content {
-    width: 50%;
-  }
-  
-  #row4 {
-    margin-top: 80px;
-  }
 }
 
 #profilepic {
@@ -68,7 +43,7 @@ h1 {
 }
 
 #hi_badge {
-  width: 450px;
+  width: 480px;
   margin: 0 auto;
 }
 
@@ -100,7 +75,7 @@ h1 {
   transition: opacity 0.4s ease-in;
 }
 
-.section_icon_hover {
+.icon_hover {
   opacity: 1;
   transition: opacity 0.4s ease-in;
 }
@@ -154,13 +129,8 @@ h1 {
   padding-top: 7px;
 }
 
-#description2, #description4 {
+#description2, #description3, #description4 {
   float: right;
-  position: relative;
-}
-
-#description3 {
-  float: left;
   position: relative;
 }
 
@@ -168,13 +138,8 @@ h1 {
   transition: margin 0.25s ease-in;  
 }
 
-.h1row2move, .h1row4move {
+.h1row2move, .h1row3move, .h1row4move {
   margin-left: 30px;
-  transition: margin 0.25s ease-in;
-}
-
-.h1row3move {
-  margin-right: 30px;
   transition: margin 0.25s ease-in;
 }
 
@@ -207,8 +172,13 @@ p {
   font-size: 35px;
 }
 
+section {
+  max-width: 768px;
+  margin: auto;
+}
+
 #row1 {
-  padding: 100px 0;
+  padding: 100px 10px;
   background: #6684E6;
   background-image: -moz-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66FFFF), color-stop(100%, #6600CC));
@@ -219,8 +189,7 @@ p {
 }
 
 #row2 {
-  padding: 35px;
-  transition: box-shadow 0.5s ease-in;
+  padding: 35px 35px;
   background: #008BA0;
   background: -moz-linear-gradient(top right, #00CCCC 0%, #003366 100%);
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #003366), color-stop(100%, #003366));
@@ -231,9 +200,7 @@ p {
 }
 
 #row3 {
-  padding: 35px;
-  transition: box-shadow 0.5s ease-in;
-  text-align: right;
+  padding: 35px 35px;
   background: #0D9875;
   background: -moz-linear-gradient(top right, #19CEA1 0%, #005842 100%);
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #19CEA1), color-stop(100%, #005842));
@@ -244,12 +211,7 @@ p {
 }
 
 #row4 {
-  position: absolute;
-  transition: box-shadow 0.5s ease-in;
-  padding: 35px;
-}
-
-.mobile_row4 {
+  padding: 35px 35px;
   background: #CC5D1C;
   background: -moz-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #CCCC00), color-stop(100%, #CC0033));
@@ -257,12 +219,6 @@ p {
   background: -o-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
   background: -ms-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
   background: linear-gradient(to bottom right, #CCCC00 0%, #CC0033 100%);
-}
-
-@media only screen and (max-width: 1365px) {
-  #row4 {
-    width: 100%;
-  }
 }
 
 a:link, a:hover, a:active, a:visited {
@@ -297,10 +253,15 @@ a:link, a:hover, a:active, a:visited {
   vertical-align: middle;
 }
 
+.skills {
+  font-size: 23px;
+  line-height: 40px;
+}
+
 .skills, .hash_section {
   opacity: 0.9;
   display: inline-block;
-  width: 65%;
+  width: 68%;
   vertical-align: middle;
   padding-left: 15px;
   margin-left: 15px;
@@ -311,9 +272,9 @@ a:link, a:hover, a:active, a:visited {
 .hash_section {
   display: block;
   width: 95%;
-  font-size: 16px;
+  font-size: 17.5px;
   line-height: 30px;
-  margin-top: 10px;
+  margin: 10px 0 20px 0;
 }
 
 .app_section {
@@ -327,7 +288,7 @@ a:link, a:hover, a:active, a:visited {
   display: inline-block;
   width: 27%;
   text-align: right;
-  font-size: 26px;
+  font-size: 31px;
   vertical-align: middle;
   opacity: 0.7;
   transition: opacity 0.25s ease-in;
@@ -342,13 +303,16 @@ a:link, a:hover, a:active, a:visited {
   display: inline-block;
   opacity: 1;
   width: 65%;
-  font-size: 18px;
+  font-size: 22px;
   padding: 0 0 5px 15px;
   margin-left: 15px;
   border-left: 1px solid white;
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   vertical-align: middle;
+  line-height: 40px;
 }
+
+p.app_description {}
 
 .screenshot {
   display: inline-block;
@@ -367,24 +331,32 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .app_details {
+  opacity: 0.9 !important;
   display: inline-block;
-  width: 49%;
+  width: 45%;
   padding: 5px 0 0 15px;
-  font-size: 14px;
+  font-size: 16.5px;
   opacity: 0.85;
-  line-height: 24px;
+  line-height: 22px;
   vertical-align: middle;
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1365px) {
-  .app_details {
-    font-size: 16px;
-  }
+#scroll_div {
+  text-align: center;
+  padding-top: 10px;
+  opacity: 0.7;
+  transition: opacity 0.25s ease-in;
+  font-size: 25px;
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1365px) {
+#scroll_div:hover {
+  opacity: 1;
+  transition: opacity 0.25s ease-in;
+}
+
+@media only screen and (min-width: 837px) {
   .app_details {
-    line-height: 30px;
+    line-height: 25px;
   }
 }
 
@@ -396,23 +368,27 @@ a:link, a:hover, a:active, a:visited {
   #description1_line2 {
     font-size: 20px;
   }
-  
-  .app_details {
-    line-height: 19.5px;
-  }
 }
 
-#scroll_div {
-  text-align: center;
-  padding-top: 10px;
-  visibility: hidden;
+@media only screen and (min-width: 768px) and (max-width: 833px) {
+  .types, .app_name {
+    width: 26%;
+  }
+
+  .app_name {
+    font-size: 27px;
+  }
+
+  .skills, .app_description {
+    font-size: 20px;
+  }
+
+  .app_details {
+    font-size: 15.5px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-  #row1 {
-    padding: 50px 0;
-  }
-
   #profilepic {
     display: block;
     margin: 0 auto;
@@ -493,9 +469,14 @@ a:link, a:hover, a:active, a:visited {
     display: none;
   }
 
-  #row2, #row3, #row4 {
-    padding: 20px 10px;
-    width: 100%
+  #row1, #row2, #row3, #row4 {
+    padding: 30px 10px;
+    width: 100%;
+  }
+
+  #row1 {
+    padding: 70px 10px 50px 10px;
+    width: 100%;
   }
  
   #h1row2, #h1row3, #h1row4 {
@@ -509,7 +490,7 @@ a:link, a:hover, a:active, a:visited {
   }
   
   .hidden {
-    padding: 15px;
+    padding: 15px 15px 0 15px;
   }
   
   .hash_section {
@@ -517,6 +498,7 @@ a:link, a:hover, a:active, a:visited {
     margin: 0;
     border: 0;
     font-size: 16px;
+    width: 100%;
   }
   
   .hash {
@@ -560,16 +542,12 @@ a:link, a:hover, a:active, a:visited {
     line-height: 25px;
   }
   
-  .app_details, .screenshot {
-    width: 100%;
+  .screenshot {
+    width: 97%
   }
   
   .app_details {
     opacity: 1;
     padding-bottom: 15px;
-  }
-  
-  #scroll_div {
-    visibility: visible;
   }
 }
