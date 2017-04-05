@@ -5,7 +5,7 @@ $(function(){
   if (navigator.appVersion.indexOf("X11") != -1) OS = "UNIX";
   if (navigator.appVersion.indexOf("Linux") != -1) OS = "Linux";
   
-  if (OS === "Windows" || OS === "UNIX" || OS === "Linux" || window.screen.availWidth < 768) {
+  if (OS === "Windows" || OS === "UNIX" || OS === "Linux" || window.screen.availWidth < 1025) {
     $('body, h1, .types').css('font-weight', '300');
     
     if (OS === "Windows" || OS === "UNIX" || OS === "Linux") {
