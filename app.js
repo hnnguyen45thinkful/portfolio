@@ -17,14 +17,25 @@ $(function(){
     }
     
     if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-      $('body').css('text-shadow', '0 0 2px #222222');
+      $('body').css('text-shadow', '0 0 2px #111111');
     }
   }
-  
-  $('.open_close').click(function(e) {
-    e.preventDefault();
+
+  if ($(window).width() > 767) {
+    var height = $("#row1").outerHeight(true);    
+    
+    $(window).scroll(function(){                          
+      if ($(window).scrollTop() > (height - 10)){
+          $('nav').fadeIn("slow");
+      } else {
+          $('nav').fadeOut("fast");
+      }
+    });
+  }
+    
+  $('.open_close').click(function() {
     if ($(window).width() < 768) {
-      $(this).parent().siblings('.hidden').slideToggle(function() {
+      $(this).siblings('.hidden').slideToggle(function() {
         $('html, body').animate({ scrollTop: $(this).parent('section').parent('div').offset().top }, "slow");            
       });
     }      
@@ -61,6 +72,26 @@ $(function(){
 
     $('#scroll_div').hover(function() {
       $(this).children('a').children('i').toggleClass('icon_hover');
+    });
+
+    $(document).on('click', '.to_top', function (e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, "slow");
+    });
+    
+    $(document).on('click', '.to_about', function (e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $('#row2').offset().top - 50 }, 'slow');
+    });
+
+    $(document).on('click', '.to_skills', function (e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $('#row3').offset().top - 50 }, 'slow');
+    });
+
+    $(document).on('click', '.to_projects', function (e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $('#row4').offset().top - 50 }, 'slow');
     });
   }
 });
