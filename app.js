@@ -25,7 +25,7 @@ $(function(){
     var height = $("#row1").outerHeight(true);    
     
     $(window).scroll(function(){                          
-      if ($(window).scrollTop() > (height - 10)){
+      if ($(window).scrollTop() > (height - 50)){
           $('nav').fadeIn("slow");
       } else {
           $('nav').fadeOut("fast");
