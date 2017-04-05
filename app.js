@@ -5,7 +5,7 @@ $(function(){
   if (navigator.appVersion.indexOf("X11") != -1) OS = "UNIX";
   if (navigator.appVersion.indexOf("Linux") != -1) OS = "Linux";
   
-  if (OS === "Windows" || OS === "UNIX" || OS === "Linux" || window.screen.availWidth < 1025 || navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+  if (OS === "Windows" || OS === "UNIX" || OS === "Linux" || window.screen.availWidth < 768) {
     $('body, h1, .types').css('font-weight', '300');
     
     if (OS === "Windows" || OS === "UNIX" || OS === "Linux") {
@@ -15,13 +15,15 @@ $(function(){
       $('#description2').css('left', '-7px');
       $('#description3').css('right', '-7px');
     }
-    
-    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-      $('body').css('text-shadow', '0 0 2px #111111');
-    }
   }
 
-  if ($(window).width() > 767) {
+  if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    $('#my_name').css('text-shadow', '0 0 2px #555555'); 
+    $('#nav_text').css('font-weight', '300');    
+    $('.hash').css('opacity', '1');
+  }
+
+  if ($(window).width() > 1023) {
     var height = $("#row1").outerHeight(true);    
     
     $(window).scroll(function(){                          

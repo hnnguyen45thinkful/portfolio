@@ -3,7 +3,7 @@ body {
   font-weight: 100;
   font-size: 130%;
   color: white;
-  text-shadow: 0 0 2px #111111;
+  text-shadow: 0 0 2px #343434;
   height: 100%;
   margin: 0;
 }
@@ -85,7 +85,6 @@ h1 {
 #my_name {
   font-size: 70px;
   font-weight: 300;
-  text-shadow: 0 0 2px #343434;
 }
 
 #intro {
@@ -173,7 +172,6 @@ h1 {
   text-align: center;
   margin-top: 35px;
   font-size: 30px;
-  opacity: 0.9;
 }
 
 #description2, #description3, #description4 {
@@ -208,12 +206,13 @@ p {
 .hash {
   opacity: 0.5;
   margin-right: 10px;
-  transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in, text-shadow 0.25s ease-in;
 }
 
 .hash_hover {
   opacity: 1;
-  transition: opacity 0.25s ease-in;
+  text-shadow: 0 0 1px silver;
+  transition: opacity 0.25s ease-in, text-shadow 0.25s ease-in;
 }
 
 .medium {
@@ -376,7 +375,7 @@ a:link, a:hover, a:active, a:visited {
   display: inline-block;
   width: 45%;
   padding: 5px 0 0 15px;
-  font-size: 16.5px;
+  font-size: 15.5px;
   line-height: 22px;
   vertical-align: middle;
 }
@@ -406,7 +405,7 @@ a:link, a:hover, a:active, a:visited {
 
 @media only screen and (min-width: 837px) {
   .app_details {
-    line-height: 25px;
+    line-height: 27px;
   }
 }
 
@@ -434,7 +433,7 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .app_details {
-    font-size: 15.5px;
+    font-size: 15px;
   }
 
   #nav_container {
