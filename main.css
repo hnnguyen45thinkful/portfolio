@@ -13,7 +13,7 @@ nav {
   position:fixed;
   top: 0px;
   width: 100%; 
-  height: 50px;
+  height: 60px;
   z-index: 9999;
   display: none;
   background: #6684E6;
@@ -31,9 +31,8 @@ nav {
   left: -15px;
 }
 
-
 #site_icon {
-  height: 60px;
+  height: 70px;
   -webkit-filter: contrast(1.3) brightness(0.95);
   filter: contrast(1.3) brightness(0.95);
   display: inline-block;
@@ -44,8 +43,8 @@ nav {
   display: inline-block;  
   vertical-align: middle;
   position: relative;
-  top: -5px;
-  left: 7px;
+  top: -6px;
+  left: 13px;
 }
 
 .nav_link {
@@ -53,7 +52,7 @@ nav {
 }
 
 .nav_link:hover {
-  text-shadow: 0 0 1px silver;
+  text-shadow: 0 0 2px silver;
   transition: text-shadow 0.25s ease-in;
 }
 
@@ -124,7 +123,7 @@ h1 {
 
 .fa:hover, .icon_hover {
   opacity: 1;
-  text-shadow: 0 0 1px silver;
+  text-shadow: 0 0 2px silver;
   transition: opacity 0.4s ease-in, text-shadow 0.25s ease-in;
 }
 
@@ -150,9 +149,13 @@ h1 {
   text-align: center;
 }
 
+.fa-file-pdf-o {
+  transform: scaleY(0.9);
+}
+
 .icon_border {
   height: 40px;
-  width: 35.5%;
+  width: 30%;
   display: inline-block;
   border-bottom: 1px solid white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -160,7 +163,7 @@ h1 {
 
 @media only screen and (min-width: 768px) and (max-width: 850px) {
   .icon_border {
-    width: 33%; 
+    width: 28%;
   }
 }
 
@@ -172,25 +175,30 @@ h1 {
   text-align: center;
   margin-top: 35px;
   font-size: 30px;
+  transition: text-shadow 0.25s ease-in;
+}
+
+#contact_line:hover {
+  text-shadow: 0 0 2px silver;
+  transition: text-shadow 0.25s ease-in;
 }
 
 #description2, #description3, #description4 {
   font-size: 30px;
   padding-top: 7px;
-}
-
-#description2, #description3, #description4 {
   float: right;
   position: relative;
+  text-shadow: 0 0 2px #343434 !important;
 }
 
 #h1row2, #h1row3, #h1row4 {
-  transition: margin 0.25s ease-in;  
+  transition: margin 0.25s ease-in, text-shadow 0.25s ease-in;  
 }
 
 .h1row2move, .h1row3move, .h1row4move {
   margin-left: 30px;
-  transition: margin 0.25s ease-in;
+  text-shadow: 0 0 2px silver;
+  transition: margin 0.25s ease-in, text-shadow 0.25s ease-in;
 }
 
 p {
@@ -211,7 +219,7 @@ p {
 
 .hash_hover {
   opacity: 1;
-  text-shadow: 0 0 1px silver;
+  text-shadow: 0 0 2px silver;
   transition: opacity 0.25s ease-in, text-shadow 0.25s ease-in;
 }
 
@@ -224,7 +232,7 @@ p {
 }
 
 #row1 {
-  padding: 100px 10px;
+  padding: 150px 10px;
   background: #6684E6;
   background-image: -moz-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66FFFF), color-stop(100%, #6600CC));
@@ -339,7 +347,7 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .app_name:hover {
-  text-shadow: 0 0 1px silver;
+  text-shadow: 0 0 2px silver;
   transition: text-shadow 0.25s ease-in;
 }
 
@@ -388,7 +396,7 @@ a:link, a:hover, a:active, a:visited {
 }
 
 #scroll_div:hover {
-  text-shadow: 0 0 1px silver;
+  text-shadow: 0 0 2px silver;
   transition: text-shadow 0.25s ease-in;
 }
 
@@ -500,7 +508,7 @@ a:link, a:hover, a:active, a:visited {
 
   .icon_border {
     height: 40px;
-    width: 15%;
+    width: 8%;
     display: inline-block;
     border-bottom: 1px solid white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -529,7 +537,7 @@ a:link, a:hover, a:active, a:visited {
   }
 
   #row1 {
-    padding: 70px 10px 50px 10px;
+    padding: 50px 10px 50px 10px;
     width: 100%;
   }
  
