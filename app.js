@@ -1,4 +1,5 @@
 $(function(){
+  
   let OS="Unknown OS";
   if (navigator.appVersion.indexOf("Win") != -1) OS = "Windows";
   if (navigator.appVersion.indexOf("Mac") != -1) OS = "Mac";
@@ -20,7 +21,7 @@ $(function(){
   }
 
   if ($(window).width() > 767) {
-    var height = $("#row1").outerHeight(true);    
+    let height = $("#row1").outerHeight(true);    
     
     $(window).scroll(function(){                          
       if ($(window).scrollTop() > (height - 60)){
@@ -73,12 +74,12 @@ $(function(){
     });
   }
 
-  $(document).on('click', '.to_top', function (e) {
+  $(document).on('click', '.to_top, .up', function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, "slow");
   });
   
-  $(document).on('click', '.to_about', function (e) {
+  $(document).on('click', '.to_about, .down', function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: $('#row2').offset().top - 50 }, 'slow');
   });

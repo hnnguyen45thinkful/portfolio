@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 100;
@@ -58,7 +62,7 @@ nav {
 
 section {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 #profilepic {
@@ -192,13 +196,12 @@ h1 {
 }
 
 #h1row2, #h1row3, #h1row4 {
-  transition: margin 0.25s ease-in, text-shadow 0.25s ease-in;  
+  transition: text-shadow 0.25s ease-in;  
 }
 
 .h1row2move, .h1row3move, .h1row4move {
-  margin-left: 30px;
-  text-shadow: 0 0 2px silver;
-  transition: margin 0.25s ease-in, text-shadow 0.25s ease-in;
+  text-shadow: 0 0 3px white;
+  transition: text-shadow 0.25s ease-in;
 }
 
 p {
@@ -231,8 +234,12 @@ p {
   font-size: 35px;
 }
 
+#row1, #row2, #row3, #row4 {
+  width: 100%;
+}
+
 #row1 {
-  padding: 150px 10px;
+  padding: 175px 10px 185px 10px;
   background: #6684E6;
   background-image: -moz-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66FFFF), color-stop(100%, #6600CC));
@@ -242,9 +249,23 @@ p {
   background-image: linear-gradient(to bottom right, #66FFFF 0%, #6600CC 100%);
 }
 
+@media only screen and (min-width: 768px) {
+  #row1 {
+    height: 100vh;
+    padding: 0 10px;
+  }
+
+  #row1_content {
+    position: relative;
+    transform: translate(0px, -50%);
+    top: 50%;
+  }
+}
+
+
 #row2 {
   position: relative;
-  padding: 35px 35px;
+  padding: 75px 35px;
   background: #008BA0;
   background: -moz-linear-gradient(top right, #00CCCC 0%, #003366 100%);
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #003366), color-stop(100%, #003366));
@@ -255,7 +276,7 @@ p {
 }
 
 #row3 {
-  padding: 35px 35px;
+  padding: 75px 35px;
   background: #0D9875;
   background: -moz-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #19CEA1), color-stop(100%, #144A3D));
@@ -266,7 +287,7 @@ p {
 }
 
 #row4 {
-  padding: 35px 35px;
+  padding: 75px 35px 0px 35px;
   background: #CC5D1C;
   background: -moz-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #CCCC00), color-stop(100%, #CC0033));
@@ -332,8 +353,8 @@ a:link, a:hover, a:active, a:visited {
 
 .app_section {
   text-align: left;
-  margin: 25px 0;
-  border-top: 1px solid white;
+  margin-top: 25px;
+  /* padding-bottom:  10px; */
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -388,16 +409,34 @@ a:link, a:hover, a:active, a:visited {
   vertical-align: middle;
 }
 
-#scroll_div {
-  text-align: center;
-  padding-top: 10px;
-  transition: text-shadow 0.25s ease-in;
+.scroll {
+  text-align: center; 
   font-size: 25px;
+  transition: text-shadow 0.25s ease-in;
 }
 
-#scroll_div:hover {
+.scroll:hover {
   text-shadow: 0 0 2px silver;
   transition: text-shadow 0.25s ease-in;
+}
+
+.down {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  left: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .down {
+    display: none;
+  }
+}
+
+.up {
+  padding: 70px 0 15px 0;
 }
 
 @media only screen and (min-width: 870px) {
@@ -508,7 +547,7 @@ a:link, a:hover, a:active, a:visited {
 
   .icon_border {
     height: 40px;
-    width: 8%;
+    width: 6%;
     display: inline-block;
     border-bottom: 1px solid white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -537,7 +576,7 @@ a:link, a:hover, a:active, a:visited {
   }
 
   #row1 {
-    padding: 50px 10px 50px 10px;
+    padding: 50px 7px;
     width: 100%;
   }
  
@@ -608,5 +647,9 @@ a:link, a:hover, a:active, a:visited {
   
   .app_details {
     padding-bottom: 15px;
+  }
+
+  .up {
+    padding: 0;
   }
 }
