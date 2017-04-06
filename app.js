@@ -17,7 +17,9 @@ $(function(){
 
   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
     $('#my_name').css('text-shadow', '0 0 2px #555555'); 
-    $('#nav_text, .hash').css('font-weight', '300');    
+    $('#nav_text, .hash').css('font-weight', '300');  
+    $('.types, .skills, .skills_description').css('opacity', '1');
+
   }
 
   if ($(window).width() > 767) {
@@ -47,7 +49,7 @@ $(function(){
 
   if (window.screen.availWidth > 768) {
     $('.hash_section').hover(function(){
-      $(this).children('.hash').toggleClass('hash_hover');
+      $(this).children('.hash').toggleClass('text_hover');
     });  
     
     $('#row2').hover(function() {
@@ -68,12 +70,19 @@ $(function(){
     $('.app_name').hover(function() {
       $(this).children('a').children('i').toggleClass('icon_hover');
     });
-
-    $('#scroll_div').hover(function() {
-      $(this).children('a').children('i').toggleClass('icon_hover');
+    
+    $('.type_section').hover(function() {
+      $(this).children('.types').toggleClass('text_hover');
+      $(this).children('.types').children('.types_icon').toggleClass('icon_hover');     
+      $(this).children('.types').siblings('.skills, .skills_description').toggleClass('text_hover');     
     });
   }
+  
+  setInterval(function() {
+      $('.fa-chevron-down, .fa-chevron-up').toggleClass('icon_hover');
+  }, 1000);
 
+console.log( $('.scroll').children('i'));
   $(document).on('click', '.to_top, .up', function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, "slow");

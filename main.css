@@ -47,17 +47,17 @@ nav {
   display: inline-block;  
   vertical-align: middle;
   position: relative;
-  top: -6px;
+  top: -8px;
   left: 13px;
 }
 
 .nav_link {
-  transition: text-shadow 0.25s ease-in;
+  transition: text-shadow 0.25s linear;
 }
 
 .nav_link:hover {
   text-shadow: 0 0 2px silver;
-  transition: text-shadow 0.25s ease-in;
+  transition: text-shadow 0.25s linear;
 }
 
 section {
@@ -105,7 +105,7 @@ h1 {
 
 .fa {
   opacity: 0.3;
-  transition: opacity 0.4s ease-in, text-shadow 0.25s ease-in;
+  transition: opacity 0.25s linear, text-shadow 0.25s linear;
 }
 
 .fa-cubes {
@@ -117,7 +117,7 @@ h1 {
   transform: scale(0.9,1);
 }
 
-.fa-file-text {
+.fa-file-text-o {
   -webkit-transform:scale(0.95,0.85);
   -moz-transform:scale(0.95,0.85);
   -ms-transform:scale(0.95,0.85);
@@ -128,7 +128,7 @@ h1 {
 .fa:hover, .icon_hover {
   opacity: 1;
   text-shadow: 0 0 2px silver;
-  transition: opacity 0.4s ease-in, text-shadow 0.25s ease-in;
+  transition: opacity 0.25s linear, text-shadow 0.25s linear;
 }
 
 #description1_line1 {
@@ -149,12 +149,8 @@ h1 {
 
 #contact {
   font-size: 60px;
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
-}
-
-.fa-file-pdf-o {
-  transform: scaleY(0.9);
 }
 
 .icon_border {
@@ -179,15 +175,16 @@ h1 {
   text-align: center;
   margin-top: 35px;
   font-size: 30px;
-  transition: text-shadow 0.25s ease-in;
+  transition: text-shadow 0.25s linear;
 }
 
 #contact_line:hover {
   text-shadow: 0 0 2px silver;
-  transition: text-shadow 0.25s ease-in;
+  transition: text-shadow 0.25s linear;
 }
 
 #description2, #description3, #description4 {
+  opacity: 0.7;
   font-size: 30px;
   padding-top: 7px;
   float: right;
@@ -196,12 +193,12 @@ h1 {
 }
 
 #h1row2, #h1row3, #h1row4 {
-  transition: text-shadow 0.25s ease-in;  
+  transition: margin 0.25s linear, text-shadow 0.25s linear;
 }
 
 .h1row2move, .h1row3move, .h1row4move {
-  text-shadow: 0 0 3px white;
-  transition: text-shadow 0.25s ease-in;
+  text-shadow: 0 0 5px white;
+  transition: margin 0.25s linear, text-shadow 0.25s linear;
 }
 
 p {
@@ -210,28 +207,22 @@ p {
 }
 
 .punc {
-  opacity: 0.45;
+  opacity: 0.3;
   padding: 0 2px;
 }
 
 .hash {
   opacity: 0.5;
   margin-right: 10px;
-  transition: opacity 0.25s ease-in, text-shadow 0.25s ease-in;
-}
-
-.hash_hover {
-  opacity: 1;
-  text-shadow: 0 0 2px silver;
-  transition: opacity 0.25s ease-in, text-shadow 0.25s ease-in;
+  transition: opacity 0.25s linear, text-shadow 0.25s linear;
 }
 
 .medium {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .large {
-  font-size: 35px;
+  font-size: 40px;
 }
 
 #row1, #row2, #row3, #row4 {
@@ -265,36 +256,64 @@ p {
 
 #row2 {
   position: relative;
-  padding: 75px 35px;
-  background: #008BA0;
-  background: -moz-linear-gradient(top right, #00CCCC 0%, #003366 100%);
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #003366), color-stop(100%, #003366));
-  background: -webkit-linear-gradient(left bottom, #00CCCC 0%, #003366 100%);
-  background: -o-linear-gradient(top right, #00CCCC 0%, #003366 100%);
-  background: -ms-linear-gradient(top right, #00CCCC 0%, #003366 100%);
-  background: linear-gradient(to top right, #00CCCC 0%, #003366 100%);
+  padding: 50px 35px;
+  background: 
+  linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url(img/pier.jpg) no-repeat fixed;
+  background-position: 50% 100%;
+  box-shadow: 0px 0px 10px 0px #222222;
+  /*background: #008BA0;*/
+  /*background: -moz-linear-gradient(top right, #00CCCC 0%, #003366 100%);*/
+  /*background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #003366), color-stop(100%, #003366));*/
+  /*background: -webkit-linear-gradient(left bottom, #00CCCC 0%, #003366 100%);*/
+  /*background: -o-linear-gradient(top right, #00CCCC 0%, #003366 100%);*/
+  /*background: -ms-linear-gradient(top right, #00CCCC 0%, #003366 100%);*/
+  /*background: linear-gradient(to top right, #00CCCC 0%, #003366 100%);*/
 }
 
 #row3 {
-  padding: 75px 35px;
-  background: #0D9875;
-  background: -moz-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #19CEA1), color-stop(100%, #144A3D));
-  background: -webkit-linear-gradient(left bottom, #19CEA1 0%, #144A3D 100%);
-  background: -o-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);
-  background: -ms-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);
-  background: linear-gradient(to top right, #19CEA1 0%, #144A3D 100%);
+  padding: 50px 35px;
+  background: 
+  linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  ),
+  url('img/denim.png') scroll;
+  box-shadow: 0px 0px 20px 0px #222222;
+  /*background: #0D9875;*/
+  /*background: -moz-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);*/
+  /*background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #19CEA1), color-stop(100%, #144A3D));*/
+  /*background: -webkit-linear-gradient(left bottom, #19CEA1 0%, #144A3D 100%);*/
+  /*background: -o-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);*/
+  /*background: -ms-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);*/
+  /*background: linear-gradient(to top right, #19CEA1 0%, #144A3D 100%);*/
 }
 
 #row4 {
-  padding: 75px 35px 0px 35px;
-  background: #CC5D1C;
-  background: -moz-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #CCCC00), color-stop(100%, #CC0033));
-  background: -webkit-linear-gradient(left top, #CCCC00 0%, #CC0033 100%);
-  background: -o-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
-  background: -ms-linear-gradient(bottom right, #CCCC00 0%, #CC0033 100%);
-  background: linear-gradient(to bottom right, #CCCC00 0%, #CC0033 100%);
+  padding: 50px 35px 0px 35px;
+  position: relative;
+  background: 
+  linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.8)
+  ),
+  url(img/sunset.jpg) no-repeat fixed;
+  background-position: top;
+  background-size: 185% 185%;
+  box-shadow: 0px 0px 10px 0px #222222;
+  /*background: #6684E6;*/
+  /*background-image: -moz-linear-gradient(top left, #66FFFF 0%, #6600CC 100%);*/
+  /*background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0%, #66FFFF), color-stop(100%, #6600CC));*/
+  /*background-image: -webkit-linear-gradient(right bottom, #66FFFF 0%, #6600CC 100%);*/
+  /*background-image: -o-linear-gradient(top left, #66FFFF 0%, #6600CC 100%);*/
+  /*background-image: -ms-linear-gradient(top left, #66FFFF 0%, #6600CC 100%);*/
+  /*background-image: linear-gradient(to top left, #66FFFF 0%, #6600CC 100%);*/
 }
 
 a:link, a:hover, a:active, a:visited {
@@ -314,41 +333,58 @@ a:link, a:hover, a:active, a:visited {
 
 .type_section {
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.types, .skills, .skills_description {
+  opacity: 0.7;
 }
 
 .types {
+  padding: 0 15px 15px 0;
+  margin: 10px 15px 0 0;
+  border-right: 1px solid white;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
   display: inline-block;
   font-size: 19px;
-  width: 27%;
+  width: 20%;
   color: white;
   font-weight: 100;
   line-height: normal;
-  text-align: right;
+  text-align: center;
   vertical-align: middle;
+  transition: opacity 0.25s linear, text-shadow 0.25s linear;
 }
 
 .skills {
-  font-size: 23px;
+  font-size: 25px;
   line-height: 40px;
+  width: 76%;
+  transition: opacity 0.25s linear, text-shadow 0.25s linear;
 }
 
 .skills, .hash_section {
   display: inline-block;
-  width: 68%;
   vertical-align: middle;
-  padding-left: 15px;
-  margin-left: 15px;
-  border-left: 1px solid white;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skills_description {
+  font-size: 17.5px;
+  line-height: 30px;
+  padding: 10px 0 10px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: opacity 0.25s linear, text-shadow 0.25s linear;
 }
 
 .hash_section {
+  padding-left: 15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
   display: block;
   width: 95%;
   font-size: 17.5px;
   line-height: 30px;
-  margin: 10px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 
 .app_section {
@@ -364,17 +400,17 @@ a:link, a:hover, a:active, a:visited {
   text-align: right;
   font-size: 31px;
   vertical-align: middle;
-  transition: text-shadow 0.25s ease-in;
+  transition: text-shadow 0.25s linear;
 }
 
 .app_name:hover {
   text-shadow: 0 0 2px silver;
-  transition: text-shadow 0.25s ease-in;
+  transition: text-shadow 0.25s linear;
 }
 
 .app_description {
   display: inline-block;
-  width: 65%;
+  width: 70%;
   font-size: 22px;
   padding: 0 0 5px 15px;
   margin-left: 15px;
@@ -392,12 +428,12 @@ a:link, a:hover, a:active, a:visited {
   border: 5px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 8px dimgray;
   vertical-align: middle;
-  transition: box-shadow 0.5s ease-in;
+  transition: box-shadow 0.5s linear;
 }
 
 .screenshot:hover {
   box-shadow: 0 0 10px white;
-  transition: box-shadow 0.5s ease-in;
+  transition: box-shadow 0.5s linear;
 }
 
 .app_details {
@@ -409,15 +445,21 @@ a:link, a:hover, a:active, a:visited {
   vertical-align: middle;
 }
 
+.text_hover {
+  opacity: 1;
+  text-shadow: 0 0 2px silver;
+  transition: opacity 0.25s linear, text-shadow 0.25s linear;
+}
+
 .scroll {
   text-align: center; 
   font-size: 25px;
-  transition: text-shadow 0.25s ease-in;
+  transition: text-shadow 0.25s linear;
 }
 
 .scroll:hover {
   text-shadow: 0 0 2px silver;
-  transition: text-shadow 0.25s ease-in;
+  transition: text-shadow 0.25s linear;
 }
 
 .down {
@@ -427,6 +469,12 @@ a:link, a:hover, a:active, a:visited {
   margin: 0 auto;
   padding-top: 10px;
   left: 0;
+}
+
+.types_icon {
+  font-size: 50px !important;
+  padding-bottom: 10px;
+  color: #66fafe;
 }
 
 @media only screen and (max-width: 767px) {
@@ -445,7 +493,7 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .app_details {
-    width: 46%
+    width: 49%;
   }
 
 }
