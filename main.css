@@ -7,7 +7,7 @@ body {
   font-weight: 100;
   font-size: 130%;
   color: white;
-  text-shadow: 0 0 2px #343434;
+  text-shadow: 0 0 1px #343434;
   height: 100%;
   margin: 0;
 }
@@ -16,8 +16,8 @@ nav {
   padding: 2px;
   position:fixed;
   top: 0px;
-  width: 100%; 
-  height: 60px;
+  width: 100%;
+  height: 65px;
   z-index: 9999;
   display: none;
   background: #6684E6;
@@ -26,8 +26,8 @@ nav {
   background-image: -webkit-linear-gradient(left top, #66FFFF 0%, #6600CC 100%);
   background-image: -o-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
   background-image: -ms-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
-  background-image: linear-gradient(to bottom right, #66FFFF 0%, #6600CC 100%);
-  box-shadow: 0 0 4px dimgray;
+  background-image: linear-gradient(to bottom right, #39f8ff 0%, #6f03a7 100%);
+  box-shadow: 0 0 10px #343434;
 }
 
 #nav_container {
@@ -35,10 +35,10 @@ nav {
   left: -15px;
 }
 
-#site_icon {
+#nav_icon {
   height: 70px;
-  -webkit-filter: contrast(1.3) brightness(0.95);
-  filter: contrast(1.3) brightness(0.95);
+  -webkit-filter: hue-rotate(8deg)contrast(1.75) brightness(0.925) saturate(1.75);
+  filter: hue-rotate(13deg) contrast(1.75) brightness(0.925) saturate(1.5);
   display: inline-block;
   vertical-align: middle;
 }
@@ -47,8 +47,9 @@ nav {
   display: inline-block;  
   vertical-align: middle;
   position: relative;
-  top: -8px;
+  bottom: 4px;
   left: 13px;
+  font-size: 26px;
 }
 
 .nav_link {
@@ -65,29 +66,25 @@ section {
   margin: 0 auto;
 }
 
-#profilepic {
-  width: 130px;
-  border-radius: 100%;
-  border: 4px solid white;
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 8px dimgray;
-}
-
 h1 {
   font-weight: 100;
   margin: 0;
 }
 
 #hi_line {
-  font-size: 20px;
+  font-size: 27px;
   position: relative;
+  /* left: 25px; */
   top: 5px;
-  left: 40px;
 }
 
 #my_name {
-  font-size: 70px;
-  font-weight: 300;
+  font-size: 100px;
+  text-shadow: 0 0 1px #454545;
+  /* letter-spacing: 2px; */
+  position:  relative;
+  bottom: -5px;
+  color: #00b4ff;
 }
 
 #intro {
@@ -98,13 +95,13 @@ h1 {
 }
 
 #hi_badge {
-  width: 480px;
+  /* width: 342px; */
   margin: 0 auto;
 }
 
 
 .fa {
-  opacity: 0.3;
+  opacity: 0.4;
   transition: opacity 0.25s linear, text-shadow 0.25s linear;
 }
 
@@ -117,48 +114,49 @@ h1 {
   transform: scale(0.9,1);
 }
 
-.fa-file-text-o {
-  -webkit-transform:scale(0.95,0.85);
-  -moz-transform:scale(0.95,0.85);
-  -ms-transform:scale(0.95,0.85);
-  -o-transform:scale(0.95,0.85);
-  transform: scale(0.95,0.85);  
-}
-
-.fa:hover, .icon_hover {
-  opacity: 1;
-  text-shadow: 0 0 2px silver;
-  transition: opacity 0.25s linear, text-shadow 0.25s linear;
-}
-
 #description1_line1 {
   text-align: center;
-  margin-top: 20px;
-  font-size: 45px;
+  margin-top: 40px;
+  font-size: 50px;
+  color: #7e80ff;
 }
 
 .transparent {
-  font-size: 38px;
+  font-size: 32px;
+  color: white;
 }
 
 #description1_line2 {
   text-align: center;
-  margin-top: 10px;
-  font-size: 21px;
+  font-size: 26px;
+  margin-top: 60px;
 }
 
 #contact {
-  font-size: 60px;
-  margin-top: 30px;
+  font-size: 42px;
+  margin-top: 80px;
   text-align: center;
 }
 
 .icon_border {
-  height: 40px;
-  width: 30%;
+  height: 25px;
+  width: 7%;
   display: inline-block;
   border-bottom: 1px solid white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.icon_text {
+  font-size: 40px;
+  vertical-align: middle;
+  position: relative;
+  bottom: 5px;
+  padding-left: 5px;
+  transition: text-shadow 0.25s linear;
+}
+
+.contact_link {
+  padding-right: 5px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 850px) {
@@ -168,24 +166,26 @@ h1 {
 }
 
 .contact_icon {
-  padding: 5px;
+  opacity: 0.4;
+  /* color: lime; */
+}
+
+.icon_hover {
+  opacity: 1;
+  text-shadow: 0 0 5px silver;
+  transition: opacity 0.25s linear, text-shadow 0.25s linear;
 }
 
 #contact_line {
-  text-align: center;
-  margin-top: 35px;
+  text-align: right;
+  margin-top: 26px;
   font-size: 30px;
-  transition: text-shadow 0.25s linear;
-}
-
-#contact_line:hover {
-  text-shadow: 0 0 2px silver;
-  transition: text-shadow 0.25s linear;
+  color: #00b4ff;
 }
 
 #description2, #description3, #description4 {
-  opacity: 0.7;
-  font-size: 30px;
+  opacity: 0.8;
+  font-size: 35px;
   padding-top: 7px;
   float: right;
   position: relative;
@@ -194,6 +194,8 @@ h1 {
 
 #h1row2, #h1row3, #h1row4 {
   transition: margin 0.25s linear, text-shadow 0.25s linear;
+  font-size: 50px;
+  vertical-align: middle;
 }
 
 .h1row2move, .h1row3move, .h1row4move {
@@ -207,22 +209,28 @@ p {
 }
 
 .punc {
-  opacity: 0.3;
+  opacity: 0.5;
   padding: 0 2px;
 }
 
+#profilepic {
+  width: 100px;
+  border-radius: 100px;
+  vertical-align: middle;
+}
+
 .hash {
-  opacity: 0.5;
+  opacity: 0.6;
   margin-right: 10px;
   transition: opacity 0.25s linear, text-shadow 0.25s linear;
 }
 
 .medium {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .large {
-  font-size: 40px;
+  font-size: 45px;
 }
 
 #row1, #row2, #row3, #row4 {
@@ -230,14 +238,15 @@ p {
 }
 
 #row1 {
+  font-family: 'Lato', sans-serif;
   padding: 175px 10px 185px 10px;
   background: #6684E6;
   background-image: -moz-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66FFFF), color-stop(100%, #6600CC));
-  background-image: -webkit-linear-gradient(left top, #66FFFF 0%, #6600CC 100%);
+  background-image: -webkit-linear-gradient(left top, #66ffff 0%, #6600cc 100%);
   background-image: -o-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
   background-image: -ms-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
-  background-image: linear-gradient(to bottom right, #66FFFF 0%, #6600CC 100%);
+  background: url('img/angles.png') scroll;
 }
 
 @media only screen and (min-width: 768px) {
@@ -260,8 +269,8 @@ p {
   background: 
   linear-gradient(
     to top,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.5)
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.9)
   ),
   url(img/pier.jpg) no-repeat fixed;
   background-position: 50% 100%;
@@ -280,10 +289,10 @@ p {
   background: 
   linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0)
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
   ),
-  url('img/denim.png') scroll;
+  url('img/wall.png') scroll;
   box-shadow: 0px 0px 20px 0px #222222;
   /*background: #0D9875;*/
   /*background: -moz-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);*/
@@ -299,13 +308,13 @@ p {
   position: relative;
   background: 
   linear-gradient(
-    to bottom right,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.8)
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.7)
   ),
   url(img/sunset.jpg) no-repeat fixed;
   background-position: top;
-  background-size: 185% 185%;
+  background-size: 160%;
   box-shadow: 0px 0px 10px 0px #222222;
   /*background: #6684E6;*/
   /*background-image: -moz-linear-gradient(top left, #66FFFF 0%, #6600CC 100%);*/
@@ -333,34 +342,45 @@ a:link, a:hover, a:active, a:visited {
 
 .type_section {
   text-align: left;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.16);
+  position: relative;
 }
 
-.types, .skills, .skills_description {
-  opacity: 0.7;
+.type_section:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    border-top: 40px solid rgba(255, 255, 255, 0.055);
+    border-left: 40px solid rgba(0, 0, 0, 0.2);
+    width: 0;
 }
 
 .types {
-  padding: 0 15px 15px 0;
-  margin: 10px 15px 0 0;
+  padding: 20px 22px 15px 0;
+  margin: 0 15px 0 0;
   border-right: 1px solid white;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   display: inline-block;
-  font-size: 19px;
-  width: 20%;
+  font-size: 23px;
+  width: 23%;
   color: white;
-  font-weight: 100;
   line-height: normal;
-  text-align: center;
+  text-align: right;
   vertical-align: middle;
-  transition: opacity 0.25s linear, text-shadow 0.25s linear;
+  transition: text-shadow 0.25s linear;
 }
 
 .skills {
-  font-size: 25px;
-  line-height: 40px;
-  width: 76%;
-  transition: opacity 0.25s linear, text-shadow 0.25s linear;
+  font-size: 35px;
+  line-height: 55px;
+  width: 70%;
+  transition: text-shadow 0.25s linear;
+}
+
+.threelines {
+  font-size: 30px;
+  line-height: 45px;
 }
 
 .skills, .hash_section {
@@ -371,34 +391,32 @@ a:link, a:hover, a:active, a:visited {
 .skills_description {
   font-size: 17.5px;
   line-height: 30px;
-  padding: 10px 0 10px 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  transition: opacity 0.25s linear, text-shadow 0.25s linear;
+  padding: 15px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hash_section {
   padding-left: 15px;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
   display: block;
   width: 95%;
   font-size: 17.5px;
   line-height: 30px;
-  margin: 20px 0 20px 0;
+  margin: 25px 0;
 }
 
 .app_section {
   text-align: left;
   margin-top: 25px;
   /* padding-bottom:  10px; */
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .app_name {
   display: inline-block;
-  width: 27%;
+  width: 30%;
   text-align: right;
-  font-size: 31px;
+  font-size: 36px;
   vertical-align: middle;
   transition: text-shadow 0.25s linear;
 }
@@ -410,12 +428,12 @@ a:link, a:hover, a:active, a:visited {
 
 .app_description {
   display: inline-block;
-  width: 70%;
-  font-size: 22px;
-  padding: 0 0 5px 15px;
+  width: 65%;
+  font-size: 22.5px;
+  padding: 5px 0 5px 15px;
   margin-left: 15px;
   border-left: 1px solid white;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
   vertical-align: middle;
   line-height: 40px;
 }
@@ -432,22 +450,22 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .screenshot:hover {
-  box-shadow: 0 0 10px white;
+  box-shadow: 0 0 15px white;
   transition: box-shadow 0.5s linear;
 }
 
 .app_details {
   display: inline-block;
   width: 45%;
-  padding: 5px 0 0 15px;
-  font-size: 15.5px;
-  line-height: 22px;
+  padding-left: 10px;
+  font-size: 16.5px;
+  line-height: 23.5px;
   vertical-align: middle;
 }
 
 .text_hover {
   opacity: 1;
-  text-shadow: 0 0 2px silver;
+  text-shadow: 0 0 3px white;
   transition: opacity 0.25s linear, text-shadow 0.25s linear;
 }
 
@@ -500,7 +518,7 @@ a:link, a:hover, a:active, a:visited {
 
 @media only screen and (min-width: 837px) {
   .app_details {
-    line-height: 27px;
+    line-height: 26px;
   }
 }
 
@@ -515,8 +533,8 @@ a:link, a:hover, a:active, a:visited {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 833px) {
-  .types, .app_name {
-    width: 26%;
+  .types {
+    width: 22%;
   }
 
   .app_name {
@@ -529,6 +547,7 @@ a:link, a:hover, a:active, a:visited {
 
   .app_details {
     font-size: 15px;
+    width: 49%;
   }
 
   #nav_container {
@@ -547,11 +566,12 @@ a:link, a:hover, a:active, a:visited {
   }
 
   #hi_line {
-    font-size: 22px;
+    font-size: 24px;
     left: 20px;
   }
 
   #my_name {
+    letter-spacing: normal;
     font-size: 61px;
     position: relative;
     top: 10px;
@@ -575,6 +595,7 @@ a:link, a:hover, a:active, a:visited {
     text-transform: uppercase;
     position: relative;
     top: 18px;
+    
   }
 
   .transparent {
@@ -595,16 +616,16 @@ a:link, a:hover, a:active, a:visited {
 
   .icon_border {
     height: 40px;
-    width: 6%;
+    width: 17%;
     display: inline-block;
     border-bottom: 1px solid white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
   
   .contact_icon {
     padding: 0px;
   }
-
+  
   br {
     display: none;
   }
@@ -670,7 +691,7 @@ a:link, a:hover, a:active, a:visited {
  .types, .app_name {
     text-transform: uppercase;
     border-bottom: 1px solid white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 10px;
   }
   
@@ -700,4 +721,62 @@ a:link, a:hover, a:active, a:visited {
   .up {
     padding: 0;
   }
+}
+
+.msg_box {
+  /* width: 760px; */
+  /* margin: 0 auto; */
+  text-align: center;
+  padding-top: 30px;
+  font-size: 26px;
+}
+
+.input_box {
+  font-size: 40px;
+  width: 600px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #00e3ff;
+}
+
+.left_bracket {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.right_bracket {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.typed-cursor{
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }
