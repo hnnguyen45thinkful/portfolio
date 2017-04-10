@@ -734,6 +734,10 @@ a:link, a:hover, a:active, a:visited {
     position: relative;
     left: 2px;
   }
+  
+  .nav_link:hover {
+    text-shadow: 0 0 1px #343434;
+  }
 
   #hi_badge {
     padding: 65px 0 15px 0;
@@ -777,6 +781,14 @@ a:link, a:hover, a:active, a:visited {
 
   #contact_line {
     padding-right: 10px
+  }
+
+  .text_hover, icon_hover {
+    text-shadow: 0 0 1px #343434;    
+  }
+  
+  .icon_hover {
+    opacity: 0.4;
   }
 
   #h1row2, #h1row3, #h1row4 {
@@ -834,6 +846,10 @@ a:link, a:hover, a:active, a:visited {
 
   .screenshot {
     box-shadow: none
+  }
+  
+  .screenshot:hover {
+    box-shadow: none;
   }
 }
 
