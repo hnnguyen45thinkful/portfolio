@@ -92,26 +92,19 @@ h1 {
 #my_name {
   font-size: 100px;
   text-shadow: 0 0 1px #454545;
-  /* letter-spacing: 2px; */
   position:  relative;
   bottom: -5px;
   color: #00b4ff;
 }
 
-#intro {
+#self_intro {
   display: inline-block;
   position: relative;
   bottom: 25px;
   left: 10px;
 }
 
-#hi_badge {
-  /* margin: 0 auto; */
-}
-
 .msg_box {
-  /* width: 760px; */
-  /* margin: 0 auto; */
   text-align: center;
   padding-top: 30px;
   font-size: 26px;
@@ -234,7 +227,6 @@ h1 {
 
 .contact_icon {
   opacity: 0.4;
-  /* color: lime; */
 }
 
 .icon_hover {
@@ -299,11 +291,11 @@ p {
   font-size: 45px;
 }
 
-#row1, #row2, #row3, #row4 {
+#intro, #about, #skills, #projects {
   width: 100%;
 }
 
-#row1 {
+#intro {
   font-family: 'Lato', sans-serif;
   padding: 175px 10px 185px 10px;
   background: #6684E6;
@@ -316,22 +308,24 @@ p {
 }
 
 /*Vertically center header content*/
-#row1 {
-  height: 100vh;
-  padding: 0 10px;
+@media only screen and (min-height: 450px) {
+  #intro {
+    height: 100vh;
+    padding: 0 10px;
+  }
+
+  #intro_content {
+    position: relative;
+    transform: translate(0px, -50%);
+    top: 50%;
+  }
 }
 
-#row1_content {
-  position: relative;
-  transform: translate(0px, -50%);
-  top: 50%;
-}
-
-#row2, #row3, #row4 {
+#about, #skills, #projects {
   padding: 50px 35px;  
 }
 
-#row2 {
+#about {
   position: relative;
   background: 
   linear-gradient(
@@ -342,16 +336,9 @@ p {
   url(img/pier.jpg) no-repeat fixed;
   background-size: cover;
   box-shadow: 0px 0px 15px 0px #222222;
-  /*background: #008BA0;*/
-  /*background: -moz-linear-gradient(top right, #00CCCC 0%, #003366 100%);*/
-  /*background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #003366), color-stop(100%, #003366));*/
-  /*background: -webkit-linear-gradient(left bottom, #00CCCC 0%, #003366 100%);*/
-  /*background: -o-linear-gradient(top right, #00CCCC 0%, #003366 100%);*/
-  /*background: -ms-linear-gradient(top right, #00CCCC 0%, #003366 100%);*/
-  /*background: linear-gradient(to top right, #00CCCC 0%, #003366 100%);*/
 }
 
-#row3 {
+#skills {
   background: 
   linear-gradient(
     to top,
@@ -360,16 +347,9 @@ p {
   ),
   url('img/wall.png') scroll;
   box-shadow: 0px 0px 20px 0px #222222;
-  /*background: #0D9875;*/
-  /*background: -moz-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);*/
-  /*background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #19CEA1), color-stop(100%, #144A3D));*/
-  /*background: -webkit-linear-gradient(left bottom, #19CEA1 0%, #144A3D 100%);*/
-  /*background: -o-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);*/
-  /*background: -ms-linear-gradient(top right, #19CEA1 0%, #144A3D 100%);*/
-  /*background: linear-gradient(to top right, #19CEA1 0%, #144A3D 100%);*/
 }
 
-#row4 {
+#projects {
   position: relative;
   background: 
   linear-gradient(
@@ -381,13 +361,6 @@ p {
   background-size: cover;
   background-position: center;
   box-shadow: 0px 0px 15px 0px #222222;
-  /*background: #6684E6;*/
-  /*background-image: -moz-linear-gradient(top left, #66FFFF 0%, #6600CC 100%);*/
-  /*background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0%, #66FFFF), color-stop(100%, #6600CC));*/
-  /*background-image: -webkit-linear-gradient(right bottom, #66FFFF 0%, #6600CC 100%);*/
-  /*background-image: -o-linear-gradient(top left, #66FFFF 0%, #6600CC 100%);*/
-  /*background-image: -ms-linear-gradient(top left, #66FFFF 0%, #6600CC 100%);*/
-  /*background-image: linear-gradient(to top left, #66FFFF 0%, #6600CC 100%);*/
 }
 
 a:link, a:hover, a:active, a:visited {
@@ -467,7 +440,6 @@ a:link, a:hover, a:active, a:visited {
 .app_section {
   text-align: left;
   margin-bottom: 25px;
-  /* padding-bottom:  10px; */
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -560,7 +532,7 @@ a:link, a:hover, a:active, a:visited {
 
 /*all mobile and small screens*/
 @media only screen and (max-width: 1024px) {
-  #row2 {
+  #about {
   background: 
   linear-gradient(
     to bottom,
@@ -571,7 +543,7 @@ a:link, a:hover, a:active, a:visited {
   box-shadow: 0 0 15px #222222;
   }
   
-  #row4 {
+  #projects {
   background: 
   linear-gradient(
     to bottom,
@@ -644,12 +616,12 @@ a:link, a:hover, a:active, a:visited {
     font-size: 18.5px;
   }
 
-  #row1, #row2, #row3, #row4 {
-    padding:60px 20px;
+  #intro, #about, #skills, #projects {
+    padding: 10px 20px;
     width: 100%;
   }
 
-  #row1 {
+  #intro {
     padding:60px 10px;    
   }
 
@@ -663,7 +635,7 @@ a:link, a:hover, a:active, a:visited {
     font-size: 64px;
   }
 
-  #intro {
+  #self_intro {
     display: block;
     width: 280px;
   }
@@ -862,7 +834,7 @@ a:link, a:hover, a:active, a:visited {
     font-size: 77px;
   }
 
-  #intro {
+  #self_intro {
     width: 350px;
   }
 
@@ -910,7 +882,7 @@ a:link, a:hover, a:active, a:visited {
     padding: 65px 0 15px 0;
   }
 
-  #intro {
+  #self_intro {
     margin-left: 30px
   }
 
@@ -952,6 +924,7 @@ a:link, a:hover, a:active, a:visited {
 
   #h1row2, #h1row3, #h1row4 {
     font-size: 45px;
+    margin-top: 70px;
   }
 
   #description2, #description3, #description4 {
@@ -959,8 +932,8 @@ a:link, a:hover, a:active, a:visited {
     padding-top: 11px;
   }
   
-  #row2, #row3, #row4 {
-    padding: 80px 35px;  
+  #about, #skills, #projects {
+    padding: 10px 35px;
   }
   
   .types {
@@ -996,6 +969,7 @@ a:link, a:hover, a:active, a:visited {
   }
 }
 
+/*Line height adjustments for smaller laptops*/
 @media only screen and (min-width: 830px) and (max-width: 889px) {
   .app_details {
     font-size: 17px;
@@ -1007,5 +981,46 @@ a:link, a:hover, a:active, a:visited {
   .app_details {
     font-size: 17px;
     line-height: 25px;
+  }
+}
+
+/*Landscape mobile devices*/
+@media only screen and (max-height: 450px) {
+  nav {
+    display: none;
+  }
+
+  #intro {
+    padding: 10px 10px 20px 10px;
+  }
+
+  .input_box {
+    height: auto;
+    margin-bottom: 5px;
+  }
+
+  .types {
+    padding-bottom: 0;
+  }
+
+  .app_name {
+    margin-top: 10px;
+  }
+
+  .app_description {
+    margin-bottom: 10px;
+  }
+
+  .screenshot {
+    width: 49%;
+    float: left;
+    display: inline;
+    margin: 5px 15px 0 0;
+  }
+
+  .app_details {
+    width: 50%;
+    display: inline;
+    text-align: justify;
   }
 }
