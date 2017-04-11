@@ -3,6 +3,7 @@
 }
 
 body {
+  background: #333333;
   font-family: "Lato", sans-serif;
   font-weight: 100;
   font-size: 130%;
@@ -37,14 +38,21 @@ nav {
 
 #nav_icon {
   height: 70px;
-  -webkit-filter: hue-rotate(8deg)contrast(1.75) brightness(0.925) saturate(1.75);
-  filter: hue-rotate(13deg) contrast(1.75) brightness(0.925) saturate(1.5);
+  -webkit-filter: hue-rotate(13deg) contrast(1.75) brightness(0.925) saturate(1.5);  
+  filter: hue-rotate(13deg) contrast(1.75) brightness(0.925) saturate(1.5);  
   display: inline-block;
   vertical-align: middle;
+  transition: -webkit-filter 0.25s linear, filter 0.25s linear;
 }
 
-#nav_text {
-  display: inline-block;  
+#nav_icon:hover {
+  -webkit-filter: hue-rotate(15deg) contrast(1.9) brightness(0.95) saturate(1.75);
+  filter: hue-rotate(15deg) contrast(1.9) brightness(0.95) saturate(1.75);
+  transition: -webkit-filter 0.25s linear, filter 0.25s linear;
+}
+
+.nav_text {
+  display: inline-block;
   vertical-align: middle;
   position: relative;
   bottom: 4px;
@@ -61,6 +69,10 @@ nav {
   transition: text-shadow 0.25s linear;
 }
 
+.smartphone_nav {
+  display: none;
+}
+
 section {
   max-width: 800px;
   margin: 0 auto;
@@ -74,7 +86,6 @@ h1 {
 #hi_line {
   font-size: 27px;
   position: relative;
-  /* left: 25px; */
   top: 5px;
 }
 
@@ -95,7 +106,7 @@ h1 {
 }
 
 #hi_badge {
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .msg_box {
@@ -304,23 +315,24 @@ p {
   background: url('img/angles.png') scroll;
 }
 
-@media only screen and (min-width: 768px) {
-  #row1 {
-    height: 100vh;
-    padding: 0 10px;
-  }
-
-  #row1_content {
-    position: relative;
-    transform: translate(0px, -50%);
-    top: 50%;
-  }
+/*Vertically center header content*/
+#row1 {
+  height: 100vh;
+  padding: 0 10px;
 }
 
+#row1_content {
+  position: relative;
+  transform: translate(0px, -50%);
+  top: 50%;
+}
+
+#row2, #row3, #row4 {
+  padding: 50px 35px;  
+}
 
 #row2 {
   position: relative;
-  padding: 50px 35px;
   background: 
   linear-gradient(
     to top,
@@ -340,7 +352,6 @@ p {
 }
 
 #row3 {
-  padding: 50px 35px;
   background: 
   linear-gradient(
     to top,
@@ -359,7 +370,6 @@ p {
 }
 
 #row4 {
-  padding: 50px 35px 0px 35px;
   position: relative;
   background: 
   linear-gradient(
@@ -387,12 +397,6 @@ a:link, a:hover, a:active, a:visited {
 
 .hidden {
   padding: 45px 0 0 0;
-}
-
-@media only screen and (max-width: 767px) {
-  .hidden {
-    display: none;
-  }
 }
 
 .type_section {
@@ -511,10 +515,10 @@ a:link, a:hover, a:active, a:visited {
 
 .app_details {
   display: inline-block;
-  width: 45%;
+  width: 49%;
   padding-left: 10px;
   font-size: 16.5px;
-  line-height: 23.5px;
+  line-height: 26px;
   vertical-align: middle;
 }
 
@@ -554,121 +558,218 @@ a:link, a:hover, a:active, a:visited {
   padding: 0 0 15px 0;
 }
 
+/*all mobile and small screens*/
+@media only screen and (max-width: 1024px) {
+  #row2 {
+  background: 
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3)
+  ),
+  url('img/denim.png') scroll;
+  box-shadow: 0 0 15px #222222;
+  }
+  
+  #row4 {
+  background: 
+  linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  ),
+  url('img/diamonds.png') scroll;
+  }
+  
+  #nav_icon:hover {
+    -webkit-filter: hue-rotate(13deg) contrast(1.75) brightness(0.925) saturate(1.5);  
+    filter: hue-rotate(13deg) contrast(1.75) brightness(0.925) saturate(1.5);    
+  }
+
+  .nav_link:hover {
+    text-shadow: 0 0 1px #343434;
+  }
+
+  .screenshot:hover {
+    box-shadow: none;
+  }
+
+  .text_hover, icon_hover {
+    text-shadow: 0 0 1px #343434;    
+  }
+  
+  .icon_hover {
+    opacity: 0.4;
+  }
+
+  .down {
+    display: none;
+  }  
+}
+
 /*smartphones*/
 @media only screen and (max-width: 767px) {
-  .down {
+  .smartphone {
     display: none;
   }
 
+  nav {
+    position: fixed;
+    background-image: -moz-linear-gradient(bottom right, #48f6ff 0%, #9227fd 100%);
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #48f6ff), color-stop(100%, #9227fd));
+    background-image: -webkit-linear-gradient(left top, #48f6ff 0%, #9227fd 100%);
+    background-image: -o-linear-gradient(bottom right, #48f6ff 0%, #9227fd 100%);
+    background-image: -ms-linear-gradient(bottom right, #48f6ff 0%, #9227fd 100%);
+    background-image: linear-gradient(to bottom right, #48f6ff 0%, #9227fd 100%);
+    box-shadow: 0 0 15px #222222;
+    height: 55px;
+  }
+
+  #nav_icon {
+    height: 60px;
+  }
+
+  #nav_container {
+    position:relative;
+    left: 0;
+  }
+
+  .nav_text {
+    display: none;
+  }
+
+  .smartphone_nav {
+    display: inline;
+    left: 5px;
+    font-size: 18.5px;
+  }
+
+  #row1, #row2, #row3, #row4 {
+    padding:60px 20px;
+    width: 100%;
+  }
+
+  #row1 {
+    padding:60px 10px;    
+  }
+
   #hi_line {
-    font-size: 24px;
-    left: 20px;
+    font-size: 22px;
+    left: 0;
+    top: 15px;
   }
 
   #my_name {
-    letter-spacing: normal;
-    font-size: 61px;
-    position: relative;
-    top: 10px;
+    font-size: 64px;
   }
 
   #intro {
     display: block;
-    left: 0px;
-    margin: 0 auto;
     width: 280px;
   }
 
   #hi_badge {
-    width: auto;
-    margin: 0 auto;
-  }
-
-  #description1_line1 {
-    margin-top: 0px;
-    font-size: 26px;
-    text-transform: uppercase;
     position: relative;
-    top: 18px;
-    
+    top: 25px;
   }
 
   .transparent {
-   display: none;
+   font-size: 23px;
+   display: block;
+   margin-left: 10px;
   }
 
-  #description1_line2 {
-    width: 310px;
-    margin: 20px auto;
-    font-size: 18px;
+  #description1_line1 {
+    display: block;
+    margin: 0 0 0 6px;
+    font-size: 45px;
+    text-align: left;
+    line-height: 45px;
   }
 
-  #contact {
-    font-size: 60px;
-    margin-top: 20px;
-    text-align: center;
+  .msg_box {
+    text-align: left;
+    padding: 0 10px;
+    font-size: 23px;
   }
 
-  .icon_border {
-    height: 40px;
-    width: 17%;
-    display: inline-block;
-    border-bottom: 1px solid white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  }
-  
-  .contact_icon {
-    padding: 0px;
-  }
-  
-  br {
+  .icon_text {
     display: none;
   }
 
+  .input_box {
+    width: 100%;
+    height: 65px;
+    font-size: 30px;
+    margin: 0 0 10px 0;
+  }
+
+  .icon_border {
+    display: none;
+  }
+
+  #contact {
+    font-size: 55px;
+    margin-top: 0px;
+    text-align: right;
+  }
+
+  .contact_link {
+    padding-right: 10px;
+  }
+
   #contact_line {
-    margin-top: 15px;
-    font-size: 22px;
+    margin-top: 0px;
+    font-size: 21px;
+    text-align: right;
+    padding-right: 10px;
   }  
 
   #description2, #description3, #description4 {
     display: none;
   }
-
-  #row1, #row2, #row3, #row4 {
-    padding: 30px 10px;
-    width: 100%;
-  }
-
-  #row1 {
-    padding: 50px 7px;
-    width: 100%;
-  }
  
   #h1row2, #h1row3, #h1row4 {
-    font-size: 25px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  
-  .h1row2move, .h1row3move, .h1row4move {
-    margin: 0;
+    font-size: 35px;
+    text-align: right;
+    padding: 10px 0 15px 0;
+    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
   }
   
   .hidden {
-    padding: 15px 15px 0 15px;
+    padding: 0;
   }
   
+  .hash_section, .skills_description, .app_details {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
   .hash_section {
-    padding: 10px 0;
+    padding: 0 0 25px 0;
     margin: 0;
     border: 0;
-    font-size: 16px;
     width: 100%;
   }
-  
+
   .hash {
-    margin-right: 5px;
-    font-size: 21px;
+    display: block;
+    padding-bottom: 15px;
+    opacity:  0.5;
+  }
+  
+  .large {
+    font-size: 35px;
+  }
+
+  .medium {
+    font-size: 35px;
+  }
+
+  br {
+    display: none;
   }
   
   .types, .skills, .app_name, .app_description, .app_details {
@@ -679,15 +780,39 @@ a:link, a:hover, a:active, a:visited {
     border: none;
     padding: 0;
     margin: 0;
-    font-size: 16px;
-    line-height: 30px;
+  }
+  
+  .types_icon {
+    padding-right: 10px;
+    font-size: 22px !important;
   }
 
- .types, .app_name {
+  .types {
+    padding: 15px 0 15px 15px;
+    font-size: 25px;
+    line-height: 20px;
+    width: 85%;
     text-transform: uppercase;
-    border-bottom: 1px solid white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 10px;
+  }
+
+  .skills {
+    padding: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    border-top: 1px solid white;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);  
+  }
+
+  .smartphone {
+    display: none;
+  }
+
+  .skills_description {
+    padding: 10px;
+  }
+
+ .app_name {
+    text-transform: uppercase;
   }
   
   .app_section {
@@ -697,20 +822,25 @@ a:link, a:hover, a:active, a:visited {
   }
   
   .app_name {
-    font-size: 20px;
+    font-size: 30px;
     padding-bottom: 5px;
   }
   
   .app_description {
+    font-size: 17px;
     line-height: 25px;
+    border-left: 1px solid white;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 10px;
   }
   
   .screenshot {
-    width: 97%
+    width: 97%;
+    box-shadow: none;
   }
   
   .app_details {
-    padding-bottom: 15px;
+    padding-bottom: 30px;
   }
 
   .up {
@@ -718,25 +848,62 @@ a:link, a:hover, a:active, a:visited {
   }
 }
 
+/*Mid-sized to large smartphones*/
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .smartphone_nav {
+    font-size: 22.5px;
+  }
+
+  #hi_line {
+    font-size: 25px;
+  }
+
+  #my_name {
+    font-size: 77px;
+  }
+
+  #intro {
+    width: 350px;
+  }
+
+  #description1_line1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .input_box {
+    font-size: 35px;
+    margin-bottom: 25px;
+  }
+
+  #contact {
+    font-size: 60px;
+  }
+
+  #contact_line {
+    font-size: 24px;
+  }
+
+  .hash_section {
+    font-size: 17px
+  }
+}
+
 /*iPad*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   nav {
-  background-image: -moz-linear-gradient(bottom right, #3ed2ff 0%, #6f03a7 100%);
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3ed2ff), color-stop(100%, #6f03a7));
-  background-image: -webkit-linear-gradient(left top, #3ed2ff 0%, #6f03a7 100%);
-  background-image: -o-linear-gradient(bottom right, #3ed2ff 0%, #6f03a7 100%);
-  background-image: -ms-linear-gradient(bottom right, #3ed2ff 0%, #6f03a7 100%);
-  background-image: linear-gradient(to bottom right, #3ed2ff 0%, #6f03a7 100%);
-  box-shadow: 0 0 15px #222222;
+    background-image: -moz-linear-gradient(bottom right, #3ed2ff 0%, #6f03a7 100%);
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3ed2ff), color-stop(100%, #6f03a7));
+    background-image: -webkit-linear-gradient(left top, #3ed2ff 0%, #6f03a7 100%);
+    background-image: -o-linear-gradient(bottom right, #3ed2ff 0%, #6f03a7 100%);
+    background-image: -ms-linear-gradient(bottom right, #3ed2ff 0%, #6f03a7 100%);
+    background-image: linear-gradient(to bottom right, #3ed2ff 0%, #6f03a7 100%);
+    box-shadow: 0 0 15px #222222;
   }
 
   #nav_container {
     position: relative;
-    left: 2px;
-  }
-  
-  .nav_link:hover {
-    text-shadow: 0 0 1px #343434;
+    left: 1px;
   }
 
   #hi_badge {
@@ -783,14 +950,6 @@ a:link, a:hover, a:active, a:visited {
     padding-right: 10px
   }
 
-  .text_hover, icon_hover {
-    text-shadow: 0 0 1px #343434;    
-  }
-  
-  .icon_hover {
-    opacity: 0.4;
-  }
-
   #h1row2, #h1row3, #h1row4 {
     font-size: 45px;
   }
@@ -799,26 +958,9 @@ a:link, a:hover, a:active, a:visited {
     font-size: 33px;
     padding-top: 11px;
   }
-
-  #row2 {
-  background: 
-  linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.5)
-  ),
-  url('img/denim.png') scroll;
-  box-shadow: 0 0 15px #222222;
-  }
   
-  #row4 {
-  background: 
-  linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.1)
-  ),
-  url('img/diamonds.png') scroll;
+  #row2, #row3, #row4 {
+    padding: 80px 35px;  
   }
   
   .types {
@@ -842,6 +984,7 @@ a:link, a:hover, a:active, a:visited {
   .app_details {
     font-size: 15px;
     width: 49%;
+    line-height: 22px;
   }
 
   .screenshot {

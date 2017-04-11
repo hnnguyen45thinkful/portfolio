@@ -432,13 +432,13 @@
 		// typing speed
 		typeSpeed: 0,
 		// time before typing starts
-		startDelay: 1500,
+		startDelay: 1000,
 		// backspacing speed
 		backSpeed: 0,
 		// shuffle the strings
 		shuffle: false,
 		// time before backspacing
-		backDelay: 2000,
+		backDelay: 1000,
 		// loop
 		loop: false,
 		// false = infinite
@@ -446,7 +446,7 @@
 		// show cursor
 		showCursor: true,
 		// character for cursor
-		cursorChar: " _",
+		cursorChar: "|",
 		// attribute to type (null == text)
 		attr: null,
 		// either html or text
@@ -464,7 +464,7 @@
 	$(function(){
 	  $(".msg").typed({
 	    strings: [
-        "interactive full-stack web apps<span class='punc'>.</span>",
+        "interactive web applications<span class='punc'>.</span>",
         " ^1000 intuitive and mobile-friendly UI<span class='punc'>.</span>",
         " ^1000 beautiful responsive websites<span class='punc'>.</span>",
         " ^1000 creative and simple solutions<span class='punc'>.</span>",        
