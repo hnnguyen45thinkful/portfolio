@@ -307,7 +307,7 @@ p {
   background: url('img/angles.png') scroll;
 }
 
-/*Vertically center header content*/
+/* Vertically center header content */
 @media only screen and (min-height: 450px) {
   #intro {
     height: 100vh;
@@ -530,7 +530,7 @@ a:link, a:hover, a:active, a:visited {
   padding: 0 0 15px 0;
 }
 
-/*all mobile and small screens*/
+/* All mobile devices and small screens */
 @media only screen and (max-width: 1024px) {
   #about {
   background: 
@@ -579,7 +579,7 @@ a:link, a:hover, a:active, a:visited {
   }  
 }
 
-/*smartphones*/
+/* Smartphones */
 @media only screen and (max-width: 767px) {
   .smartphone {
     display: none;
@@ -820,7 +820,7 @@ a:link, a:hover, a:active, a:visited {
   }
 }
 
-/*Mid-sized to large smartphones*/
+/* Mid-sized to large smartphones */
 @media only screen and (min-width: 375px) and (max-width: 767px) {
   .smartphone_nav {
     font-size: 22.5px;
@@ -861,7 +861,7 @@ a:link, a:hover, a:active, a:visited {
   }
 }
 
-/*iPad*/
+/* iPad */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   nav {
     background-image: -moz-linear-gradient(bottom right, #3ed2ff 0%, #6f03a7 100%);
@@ -969,7 +969,7 @@ a:link, a:hover, a:active, a:visited {
   }
 }
 
-/*Line height adjustments for smaller laptops*/
+/* Line height adjustments for smaller laptops */
 @media only screen and (min-width: 830px) and (max-width: 889px) {
   .app_details {
     font-size: 17px;
@@ -984,7 +984,7 @@ a:link, a:hover, a:active, a:visited {
   }
 }
 
-/*Landscape mobile devices*/
+/* Landscape mobile devices */
 @media only screen and (max-height: 450px) {
   nav {
     display: none;
