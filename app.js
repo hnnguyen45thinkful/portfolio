@@ -102,9 +102,9 @@ $(function() {
   }
   
   scrollTo('.to_top, .up', 'html');
-  scrollTo('.to_about, .down', '#about');
+  scrollTo('.to_about', '#about');
   scrollTo('.to_skills', '#skills');
-  scrollTo('.to_projects', '#projects');
+  scrollTo('.to_projects, .down', '#projects');
 
   // Blinking up and down chevrons
   setInterval(function() {
