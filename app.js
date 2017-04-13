@@ -76,6 +76,7 @@ $(function() {
     hoverToggleBoth('#about', $('h1#h1row2'), 'h1row2move', $('.fa-comment-o'));
     hoverToggleBoth('#skills', $('h1#h1row3'), 'h1row3move', $('.fa-code'));
     hoverToggleBoth('#projects', $('h1#h1row4'), 'h1row4move', $('.fa-cubes'));
+    hoverToggleBoth('#email_link', $('#email_link'), 'text_hover', $('.fa-envelope'));
     
     $('.hash_section').hover(function() { $(this).children('.hash').toggleClass('text_hover') });  
     $('.app_name').hover(function() { $(this).children('a').children('i').toggleClass('icon_hover') });

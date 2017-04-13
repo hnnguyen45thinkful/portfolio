@@ -298,12 +298,6 @@ p {
 #intro {
   font-family: 'Lato', sans-serif;
   padding: 175px 10px 185px 10px;
-  background: #6684E6;
-  background-image: -moz-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66FFFF), color-stop(100%, #6600CC));
-  background-image: -webkit-linear-gradient(left top, #66ffff 0%, #6600cc 100%);
-  background-image: -o-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
-  background-image: -ms-linear-gradient(bottom right, #66FFFF 0%, #6600CC 100%);
   background: url('img/angles.png') scroll;
 }
 
@@ -350,6 +344,7 @@ p {
 }
 
 #projects {
+  padding-bottom: 10px;
   position: relative;
   background: 
   linear-gradient(
@@ -528,6 +523,24 @@ a:link, a:hover, a:active, a:visited {
 
 .up {
   padding: 0 0 15px 0;
+}
+
+footer {
+  padding: 10px 35px;
+  background: 
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0)
+  ),
+  url('img/denim.png') scroll;
+  font-size: 25px;
+}
+
+#copyright {
+  float: right;
+  font-size: 18px;
+  padding-right: 10px
 }
 
 /* All mobile devices and small screens */
@@ -817,6 +830,20 @@ a:link, a:hover, a:active, a:visited {
 
   .up {
     padding: 0;
+  }
+
+  footer {
+    padding: 10px 20px;
+    font-size: 19px;
+  }
+
+  #footer_contact {
+    position: relative;
+    top: -1px;
+  }
+
+  #copyright {
+    font-size: 16px;
   }
 }
 
