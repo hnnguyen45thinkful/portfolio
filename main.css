@@ -101,12 +101,10 @@ h1 {
   display: inline-block;
   position: relative;
   bottom: 25px;
-  left: 10px;
 }
 
 .msg_box {
-  text-align: center;
-  padding-top: 30px;
+  padding-top: 25px;
   font-size: 26px;
 }
 
@@ -179,7 +177,7 @@ h1 {
 #description1_line1 {
   text-align: center;
   margin-top: 40px;
-  font-size: 50px;
+  font-size: 57px;
   color: #7e80ff;
 }
 
@@ -649,6 +647,7 @@ footer {
   }
 
   #self_intro {
+    left: 10px;
     display: block;
     width: 280px;
   }
@@ -905,8 +904,14 @@ footer {
     left: 1px;
   }
 
+  #self_intro {
+    left: 10px;
+  }
+
   #hi_badge {
     padding: 65px 0 15px 0;
+    position: relative;
+    left: -20px;
   }
 
   #self_intro {
@@ -915,17 +920,18 @@ footer {
 
   .transparent {
     font-size: 30px;
-    margin-left: 40px
+    margin-left: 22px
   }
 
   #description1_line1 {
-    font-size: 40px;
+    font-size: 50px;
     position: relative;
     top: 1px;
   }
 
   .msg_box {
     padding-top: 10px;
+    margin-left: 22px
   }
 
   .input_box {
