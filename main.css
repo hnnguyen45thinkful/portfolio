@@ -109,6 +109,7 @@ h1 {
 }
 
 .input_box {
+  text-align: center;
   font-size: 40px;
   width: 600px;
   height: 50px;
@@ -591,7 +592,7 @@ footer {
 }
 
 /* Smartphones */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {  
   .smartphone {
     display: none;
   }
@@ -682,6 +683,7 @@ footer {
   }
 
   .input_box {
+    text-align: left;
     width: 100%;
     height: 65px;
     font-size: 30px;
