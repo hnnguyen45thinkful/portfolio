@@ -446,6 +446,10 @@ a:link, a:hover, a:active, a:visited {
   transition: text-shadow 0.25s linear;
 }
 
+.collabowrite_name {
+  font-size: 31px;
+}
+
 .app_name:hover {
   text-shadow: 0 0 2px silver;
   transition: text-shadow 0.25s linear;
@@ -811,6 +815,10 @@ footer {
     font-size: 30px;
     padding-bottom: 5px;
   }
+
+  .collabowrite_name {
+    font-size: 26px;
+  }
   
   .app_description {
     font-size: 17px;
@@ -883,6 +891,10 @@ footer {
   #contact_line {
     font-size: 24px;
   }
+ 
+  .collabowrite_name {
+    font-size: 30px;
+  }  
 
   .hash_section {
     font-size: 17px
@@ -981,6 +993,10 @@ footer {
 
   .app_name {
     font-size: 32px;
+  }
+
+  .collabowrite_name {
+    font-size: 27px;
   }
 
   .app_description {
