@@ -465,8 +465,8 @@
 	  $(".msg").typed({
 	    strings: [
         "interactive web applications<span class='punc'>.</span>",
-        " ^1000 intuitive and mobile-friendly UI<span class='punc'>.</span>",
-        " ^1000 beautiful responsive websites<span class='punc'>.</span>",
+        " ^1000 intuitive and mobile-friendly UX<span class='punc'>.</span>",
+        " ^1000 beautiful, responsive UI<span class='punc'>.</span>",
         " ^1000 creative and simple solutions<span class='punc'>.</span>",        
       ]
 	  });
